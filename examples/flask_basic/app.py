@@ -17,8 +17,8 @@ setup_jinja2_ext(app)
 @app.cli.command("webpack_init")
 def webpack_init():
     from cookiecutter.main import cookiecutter
-    from webpack_loader import PKG_BASE_DIR
-    cookiecutter(str(PKG_BASE_DIR / 'frontend_template'))
+    from webpack_loader import GIT_URL
+    cookiecutter(GIT_URL, directory='frontend_template')
 
 
 @app.route("/")

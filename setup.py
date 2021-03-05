@@ -2,6 +2,7 @@ import os
 import re
 
 from setuptools import find_packages, setup
+from webpack_loader import GIT_URL
 
 
 def rel(*parts):
@@ -27,7 +28,7 @@ setup(
     long_description_content_type="text/markdown",
     author="Michael Yin",
     author_email="michaelyin@accordbox.com",
-    # url='https://github.com/owais/django-webpack-loader',  # use the URL to the github repo
+    url=GIT_URL,
     keywords=["python", "django", "flask", "webpack"],  # arbitrary keywords
     classifiers=[
         "Programming Language :: Python",
