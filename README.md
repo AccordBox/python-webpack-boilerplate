@@ -34,3 +34,8 @@ This project is to import Webpack solution to your Django & Flask.
 1. [Setup With Django](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_django/)
 1. [Setup With Flask](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_flask/)
 1. [Frontend Workflow](https://python-webpack-boilerplate.readthedocs.io/en/latest/frontend/)
+
+## Special Thanks
+
+[django-webpack-loader](https://github.com/owais/django-webpack-loader)
+[rails/webpacker](https://github.com/rails/webpacker)
