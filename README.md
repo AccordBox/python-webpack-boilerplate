@@ -29,7 +29,7 @@ This project is to import Webpack solution to your Django & Flask.
 - React
 - Vue
 
-## Quick check
+## Documentation
 
 1. [Setup With Django](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_django/)
 1. [Setup With Flask](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_flask/)
