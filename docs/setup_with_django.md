@@ -79,7 +79,7 @@ $ npm -v
 
 Now go to `frontend`
 
-```python
+```bash
 # install dependency packages
 $ npm install
 # run webpack in watch mode
@@ -98,6 +98,9 @@ build
 ├── manifest.json
 └── vendors
 ```
+
+!!! note
+    You can check [Frontend Workflow](frontend.md) to learn more about frontend stuff
 
 ## Config Django
 

@@ -33,10 +33,9 @@ This project is to import Webpack solution to your Python web project.
 
 After creating frontend project from the template, you will have file structures like this.
 
-```
+``` hl_lines="4 8 10 13"
 frontend
 ├── package.json
-├── build
 ├── src
 │   ├── application
 │   │   # webpack entry files here
@@ -58,6 +57,13 @@ frontend
 1. SCSS and CSS code can be put at `src/styles`
 1. Static assets such as images, fonts and other files can be put at `vendors`
 
+```bash
+# install dependency packages
+$ npm install
+# build js, scss files
+$ npm run start
+```
+
 Now you can load bundle file in templates like
 
 ```html
@@ -65,5 +71,7 @@ Now you can load bundle file in templates like
 {% javascript_pack 'app' 'app2' attrs='charset="UTF-8"' %}
 ```
 
-1. You can import multiple entry files in one template.
-1. The `javascript_pack` would also **import dependency files if need.**
+!!! note
+    1. You can import multiple entry files using one `javascript_pack` statement
+    1. The `javascript_pack` would also **import dependency files automatically to handle code splitting**
+    1. You can use `attrs` to set custom attributes

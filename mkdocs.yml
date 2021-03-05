@@ -16,3 +16,5 @@ nav:
   - Introduction: index.md
   - Setup With Django: setup_with_django.md
   - Setup With Flask: setup_with_flask.md
+  - Frontend workflow: frontend.md
+  - NPM commands: npm_command.md

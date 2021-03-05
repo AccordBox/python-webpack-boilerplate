@@ -66,7 +66,7 @@ $ npm -v
 
 Now go to `frontend`
 
-```python
+```bash
 # install dependency packages
 $ npm install
 # run webpack in watch mode
@@ -85,6 +85,9 @@ build
 ├── manifest.json
 └── vendors
 ```
+
+!!! note
+    You can check [Frontend Workflow](frontend.md) to learn more about frontend stuff
 
 ## Config Flask
 
@@ -166,8 +169,10 @@ Add `index.html` to `templates`
 </html>
 ```
 
-1. We can still use `url_for` to import image from the frontend project.
-1. We use `stylesheet_pack` and `javascript_pack` to load CSS and JS bundle files to Flask
+!!! note
+    1. You can import multiple entry files using one `javascript_pack` statement
+    1. The `javascript_pack` would also **import dependency files automatically to handle code splitting**
+    1. You can use `attrs` to set custom attributes
 
 ## Manual Test
 
