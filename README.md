@@ -39,3 +39,4 @@ This project is to import Webpack solution to your Django & Flask.
 
 [django-webpack-loader](https://github.com/owais/django-webpack-loader)
 [rails/webpacker](https://github.com/rails/webpacker)
+[wbkd/webpack-starter](https://github.com/wbkd/webpack-starter)
