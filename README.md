@@ -1,3 +1,3 @@
-# TODO
+# README
 
-test
+[Documentation](https://python-webpack-boilerplate.readthedocs.io/)
