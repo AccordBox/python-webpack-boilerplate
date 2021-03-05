@@ -1,6 +1,6 @@
 site_name: Python Webpack Boilerplate
-site_url: https://www.accordbox.com/
-repo_url: https://www.accordbox.com/
+site_url: https://python-webpack-boilerplate.readthedocs.io/
+repo_url: https://github.com/AccordBox/python-webpack-boilerplate
 theme:
   name: "material"
   palette:
