@@ -64,10 +64,11 @@ frontend
 
 ## Frontend
 
-> If you have no nodejs installed, please install it first by using below links
+!!! note
+    If you have no nodejs installed, please install it first by using below links
 
-1. On [nodejs homepage](https://nodejs.org/en/download/)
-1. Using [nvm](https://github.com/nvm-sh/nvm) I recommend this way.
+    1. On [nodejs homepage](https://nodejs.org/en/download/)
+    1. Using [nvm](https://github.com/nvm-sh/nvm) I recommend this way.
 
 ```bash
 $ node -v
@@ -85,7 +86,8 @@ $ npm install
 $ npm run watch
 ```
 
-> run watch means webpack will watch source files and recompile whenever they change
+!!! note
+    run watch means webpack will watch source files and recompile whenever they change
 
 The build files now can be found in `frontend/build` directory
 

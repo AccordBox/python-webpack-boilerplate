@@ -8,9 +8,11 @@ theme:
 markdown_extensions:
   - codehilite
   - pymdownx.superfences:
+  - markdown.extensions.admonition:
+  - pymdownx.details
 plugins:
   - search
 nav:
-  - Home: index.md
+  - Introduction: index.md
   - Setup With Django: setup_with_django.md
   - Setup With Flask: setup_with_flask.md
