@@ -31,7 +31,7 @@ This project is to import Webpack solution to your Python web project.
 
 ## Want to check?
 
-1. You fisrt can check [Setup With Django](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_django/) or [Setup With Flask](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_flask/) first.
+1. You can first check [Setup With Django](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_django/) or [Setup With Flask](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_flask/) first.
 1. And then check [Frontend Workflow](https://python-webpack-boilerplate.readthedocs.io/en/latest/frontend/)
 
 ## Documentation
