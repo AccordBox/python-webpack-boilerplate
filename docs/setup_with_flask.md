@@ -133,7 +133,7 @@ Add `index.html` to `templates`
     └── index.html
 ```
 
-```html
+```html hl_lines="7 19 25"
 <!DOCTYPE html>
 <html>
 <head>

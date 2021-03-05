@@ -26,9 +26,9 @@ Next, install package
 $ pip install python-webpack-boilerplate
 ```
 
-Add 'webpack_loader' to the `INSTALLED_APPS` in `example/settings.py`
+Add `webpack_loader` to the `INSTALLED_APPS` in `example/settings.py`
 
-```python
+```python hl_lines="9"
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -122,7 +122,7 @@ Let's do a quick test on the home page.
 
 Update `example/urls.py`
 
-```python
+```python hl_lines="6"
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
@@ -133,7 +133,7 @@ urlpatterns = [
 ]
 ```
 
-```bash
+```bash hl_lines="9"
 $ mkdir example/templates
 
 ├── frontend
@@ -142,18 +142,18 @@ $ mkdir example/templates
     ├── __init__.py
     ├── asgi.py
     ├── settings.py
-    ├── templates             # this is new
+    ├── templates
     ├── urls.py
     └── wsgi.py
 ```
 
 Update `TEMPLATES` in `example/settings.py`, so Django can know where to find the templates
 
-```python
+```python hl_lines="4"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['example/templates'],                      # this is new
+        'DIRS': ['example/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -169,7 +169,7 @@ TEMPLATES = [
 
 Add `index.html` to the above `example/templates`
 
-```django
+```django hl_lines="1 8 20 26"
 {% load webpack_loader static %}
 
 <!DOCTYPE html>
