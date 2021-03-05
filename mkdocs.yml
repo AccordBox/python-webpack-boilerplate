@@ -14,3 +14,5 @@ plugins:
   - search
 nav:
   - Home: index.md
+  - Django: setup_with_django.md
+  - Flask: setup_with_flask.md
