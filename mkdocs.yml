@@ -1,0 +1,16 @@
+site_name: Python Webpack Boilerplate
+site_url: https://www.accordbox.com/
+repo_url: https://www.accordbox.com/
+theme:
+  name: "material"
+  palette:
+    primary: teal
+  features:
+    - navigation.tabs
+    - navigation.sections
+markdown_extensions:
+  - codehilite
+plugins:
+  - search
+nav:
+  - Home: index.md
