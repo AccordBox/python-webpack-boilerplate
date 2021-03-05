@@ -2,7 +2,7 @@
 
 ## Goal
 
-This project is to import Webpack solution to your Python web project.
+This project is to import Webpack solution to your Django & Flask.
 
 ## What is included.
 
