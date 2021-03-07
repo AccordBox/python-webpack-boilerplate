@@ -29,7 +29,7 @@ $ npm install react react-dom
 
 That is it, now the frontend project can work with React.
 
-## Test
+## Sample App
 
 Update `frontend/src/application/app2.js`
 
