@@ -136,7 +136,27 @@ import App from '../components/App.vue';
 createApp(App).mount('#app');
 ```
 
-Edit `example/templates/index.html`
+Now the file structures would seem like this:
+
+```
+src
+├── application
+│   ├── app.js
+│   └── app2.js
+├── components
+│   ├── App.vue
+│   ├── HelloWorld.vue
+│   └── sidebar.js
+└── styles
+    ├── bootstrap.scss
+    └── index.scss
+```
+
+```
+$ npm run start
+```
+
+Edit Django template `templates/index.html`
 
 ```django hl_lines="8 28"
 {% load webpack_loader static %}
@@ -171,5 +191,12 @@ Edit `example/templates/index.html`
 </body>
 </html>
 ```
+
+```bash
+$ python manage.py runserver
+```
+
+!!! note
+    Here we use Vue to render specific component in the page, and we can still use raw HTML to write other parts, which is convenient
 
 ![Vue example](images/vue-example.png)

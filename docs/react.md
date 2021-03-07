@@ -78,7 +78,14 @@ ReactDOM.render(
 
 This is a simple Clock React component come from [React doc](https://reactjs.org/docs/state-and-lifecycle.html)
 
-Let's add it to our template
+!!! note
+    You can also put the React components code to the `src/components` and import the component in entryfiles. (`app2.js` in this case)
+
+```
+$ npm run start
+```
+
+Edit Django template `templates/index.html`
 
 ```html hl_lines="26-27 29"
 {% load webpack_loader static %}
@@ -117,6 +124,13 @@ Let's add it to our template
 
 1. We added a `root` div to let React render the component.
 1. We use `{% javascript_pack 'app' 'app2' %}` to load two entrypoint files to the template.
+
+```bash
+$ python manage.py runserver
+```
+
+!!! note
+    Here we use React to render specific component in the page, and we can still use raw HTML to write other parts, which is convenient
 
 Here is the screenshot:
 
