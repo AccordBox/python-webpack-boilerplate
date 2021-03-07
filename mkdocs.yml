@@ -17,3 +17,4 @@ nav:
   - Setup With Django: setup_with_django.md
   - Setup With Flask: setup_with_flask.md
   - Frontend workflow: frontend.md
+  - React support: react.md
