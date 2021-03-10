@@ -1,37 +1,8 @@
 # Introduction
 
-## Goal
-
-This project is to import Webpack solution to your Python web project.
-
-## What is included.
-
-1. A Webpack project template which has good practice.
-1. A template tag which can help load bundle file in Django template or Jinja.
-
-## Features
-
-- Supports Django and Flask (will support more framework in the future)
-- Automatic multiple entry points
-- Automatic code splitting
-- Hot Module Replacement (HMR)
-- Easy to config and customize
-- ES6 Support via [babel](https://babeljs.io/) (v7)
-- JavaScript Linting via [eslint-loader](https://github.com/MoOx/eslint-loader)
-- SCSS Support via [sass-loader](https://github.com/jtangelder/sass-loader)
-- Autoprefixing of browserspecific CSS rules via [postcss](https://postcss.org/) and [autoprefixer](https://github.com/postcss/autoprefixer)
-- Style Linting via [stylelint](https://stylelint.io/)
-
-## Optional support
-
-*Need install extra packages*
-
-- React
-- Vue
-
 ## Usage
 
-After creating frontend project from the template, you will have file structures like this.
+After [creating frontend project from the template](frontend), you will have file structures like this.
 
 ``` hl_lines="4 8 10 13"
 frontend
