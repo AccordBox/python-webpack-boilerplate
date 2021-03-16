@@ -9,7 +9,8 @@ Go to `frontend` directory
 
 ```bash
 $ npm install vue-loader @vue/compiler-sfc --save-dev
-$ npm install vue
+# install vue
+$ npm install vue@3
 ```
 
 You will have something like this in your `package.json`
