@@ -121,7 +121,7 @@ webpack can watch files and recompile whenever they change
 
 `npm run start` will launch a server process, which makes `live reloading` possible.
 
-If you change JS or SCSS files, the web page would auto refresh after the change. Now the server is working on port 9091 by default, but you can change it in `webpack.dev.js`
+If you change JS or SCSS files, the web page would auto refresh after the change. Now the server is working on port 9091 by default, but you can change it in `webpack/webpack.config.dev.js`
 
 ### npm run build
 
