@@ -1,0 +1,4 @@
+-r base.txt
+
+pytest-flask==1.2.0
+Flask==1.1.2
