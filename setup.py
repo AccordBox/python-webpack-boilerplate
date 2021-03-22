@@ -2,6 +2,7 @@ import os
 import re
 
 from setuptools import find_packages, setup
+
 from webpack_loader import GIT_URL
 
 
