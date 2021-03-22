@@ -1,1 +1,1 @@
-from examples.django_basic.example.settings import *
+from examples.django_basic.example.settings import *  # noqa

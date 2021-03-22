@@ -1,9 +1,8 @@
-import re
 import datetime
+import re
 import subprocess
 
 import pytest
-
 from tests.config import NPM_BIN_PATH
 
 
