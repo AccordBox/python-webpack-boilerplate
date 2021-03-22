@@ -4,11 +4,27 @@ on: [push, pull_request]
 
 jobs:
 
-  check-bats-version:
+  build:
+
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
+        node-version: [10.x, 12.x, 14.x]
+
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - run: npm install -g bats
-      - run: bats -v
-
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          pip install -r tests/requirements/django.txt
+      - name: Test with pytest
+        run: |
+          pytest tests/tests_django
