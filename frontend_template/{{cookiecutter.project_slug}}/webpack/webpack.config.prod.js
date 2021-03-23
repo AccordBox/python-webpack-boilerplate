@@ -16,7 +16,7 @@ module.exports = merge(common, {
       "process.env.NODE_ENV": JSON.stringify("production"),
     }),
     new MiniCssExtractPlugin({
-      filename: "css/[name]-[contenthash].css",
+      filename: "css/[name].[contenthash].css",
     }),
   ],
   module: {
