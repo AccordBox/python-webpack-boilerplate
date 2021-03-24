@@ -1,0 +1,4 @@
+-r base.txt
+
+pytest-django==4.1.0
+Django
