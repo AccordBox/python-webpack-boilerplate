@@ -29,6 +29,7 @@ jobs:
       matrix:
         python-version: [3.6, 3.7, 3.8]
         node-version: [10.x, 12.x, 14.x]
+        django-version: [2.2, 3]
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
@@ -39,6 +40,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
+      - name: Set up Django ${{ matrix.dj-version }}
+        run: |
+          pip install Django==${{ matrix.django-version }}
       - name: Install dependencies
         run: |
           pip install -e .
