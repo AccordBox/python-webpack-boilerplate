@@ -17,6 +17,7 @@ module.exports = merge(common, {
   devServer: {
     inline: true,
     hot: true,
+    host: "0.0.0.0",
     port: 9091,
     headers: {
       "Access-Control-Allow-Origin": "*",
