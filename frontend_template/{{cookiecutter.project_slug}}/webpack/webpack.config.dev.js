@@ -9,7 +9,7 @@ const common = require("./webpack.common.js");
 module.exports = merge(common, {
   target: "web",
   mode: "development",
-  devtool: "inline-cheap-source-map",
+  devtool: "inline-source-map",
   output: {
     chunkFilename: "js/[name].chunk.js",
     publicPath: "http://localhost:9091/",
