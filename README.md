@@ -6,21 +6,19 @@
 
 ## Goal
 
-This project is to provide Webpack solution to your Django & Flask projects.
-
-You can check [this blog](https://www.accordbox.com/blog/new-webpack-boilerplate-project-django-flask/) to learn more why it is created.
+**Jump start frontend project bundled by Webpack with Django, Flask quickly**
 
 ## What is included.
 
-1. A `Webpack project template` which has good structure, easy to use and customize. User can create frontend project using `cookiecutter`, and use it even they have no idea how to config Webpack.
-1. Template tags which can help load Webpack bundle file in the templates, it is smart to `auto load` dependency files.
+1. A `frontend project template` which has good structure, easy to use and customize. You can create the frontend project with just **ONE** command, and use it even you have no idea how to config Webpack.
+1. Custom template tags which can help load Webpack bundle file in the templates transparently.
 
 ## Features
 
 - **Supports Django and Flask** (will support more framework in the future)
 - Automatic multiple entry points
 - Automatic code splitting
-- Hot Module Replacement (HMR)
+- Hot Module Replacement (HMR) (auto reload web page if you edit JS or SCSS)
 - Easy to config and customize
 - ES6 Support via [babel](https://babeljs.io/) (v7)
 - JavaScript Linting via [eslint-loader](https://github.com/MoOx/eslint-loader)
