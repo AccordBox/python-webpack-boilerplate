@@ -14,6 +14,6 @@ publish: build
 	@echo "Publishing to pypi..."
 	@twine upload dist/*
 
-register:
-	@echo "Registering package on pypi..."
-	@twine register 
+publish_test: build
+	@echo "Publishing to test pypi..."
+	@twine upload --repository testpypi dist/*
