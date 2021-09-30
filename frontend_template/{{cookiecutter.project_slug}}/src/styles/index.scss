@@ -1,6 +1,9 @@
-//$primary: red;
+// If you comment out code below, bootstrap will use red as primary color
+// and btn-primary will become red
 
-@import "./bootstrap.scss";
+// $primary: red;
+
+@import "~bootstrap/scss/bootstrap.scss";
 
 .jumbotron {
   // should be relative path of the entry scss file
