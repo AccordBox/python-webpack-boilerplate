@@ -149,7 +149,6 @@ src
 │   ├── HelloWorld.vue
 │   └── sidebar.js
 └── styles
-    ├── bootstrap.scss
     └── index.scss
 ```
 
