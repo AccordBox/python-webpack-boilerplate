@@ -5,15 +5,21 @@
 Go to `frontend` directory
 
 ```bash
-$ npm install @babel/preset-react --save-dev
+$ npm install @babel/preset-react eslint-plugin-react --save-dev
 ```
 
-Once done, edit `frontend/.babelrc` to make babel to use the React preset
+Once done, edit `frontend/.babelrc` to make babel to use the above `@babel/preset-react`
 
-```json hl_lines="4"
+```json hl_lines="10"
 {
   "presets": [
-    "@babel/preset-env",
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": "3.0.0"
+      }
+    ],
     "@babel/preset-react"
   ],
   "plugins": [
@@ -22,6 +28,31 @@ Once done, edit `frontend/.babelrc` to make babel to use the React preset
   ]
 }
 ```
+
+Edit `.eslintrc` to add `plugin:react/recommended` to the `extends`, so `eslint` can recognize React syntax.
+
+```js hl_lines="5"
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "semi": 2
+  }
+}
+```
+
+Next, let's install React
 
 ```bash
 $ npm install react react-dom
