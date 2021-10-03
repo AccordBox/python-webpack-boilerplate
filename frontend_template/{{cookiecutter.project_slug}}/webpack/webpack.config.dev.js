@@ -3,7 +3,7 @@ const Webpack = require("webpack");
 const { merge } = require("webpack-merge");
 const StylelintPlugin = require("stylelint-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const ESLintPlugin = require('eslint-webpack-plugin');
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 const common = require("./webpack.common.js");
 
@@ -33,9 +33,9 @@ module.exports = merge(common, {
       files: Path.join("src", "**/*.s?(a|c)ss"),
     }),
     new ESLintPlugin({
-      extensions: 'js',
+      extensions: "js",
       emitWarning: true,
-      files: Path.resolve(__dirname, '../src'),
+      files: Path.resolve(__dirname, "../src"),
     }),
     new MiniCssExtractPlugin({ filename: "css/[name].css" }),
   ],
@@ -55,7 +55,7 @@ module.exports = merge(common, {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               sourceMap: true,
             },
