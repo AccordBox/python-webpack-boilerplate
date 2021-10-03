@@ -21,9 +21,9 @@
 - Hot Module Replacement (HMR) (auto reload web page if you edit JS or SCSS)
 - Easy to config and customize
 - ES6 Support via [babel](https://babeljs.io/) (v7)
-- JavaScript Linting via [eslint-loader](https://github.com/MoOx/eslint-loader)
+- JavaScript Linting via [eslint](https://eslint.org/)
 - SCSS Support via [sass-loader](https://github.com/jtangelder/sass-loader)
-- Autoprefixing of browserspecific CSS rules via [postcss](https://postcss.org/) and [autoprefixer](https://github.com/postcss/autoprefixer)
+- Autoprefixing of browserspecific CSS rules via [postcss](https://postcss.org/) and [postcss-preset-env](https://github.com/csstools/postcss-preset-env)
 - Style Linting via [stylelint](https://stylelint.io/)
 
 ## Optional support
@@ -38,6 +38,7 @@
 1. [Setup With Django](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_django/)
 1. [Setup With Flask](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_flask/)
 1. [Frontend Workflow](https://python-webpack-boilerplate.readthedocs.io/en/latest/frontend/)
+1. [Tailwind CSS](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_tailwind/)
 1. [Import React](https://python-webpack-boilerplate.readthedocs.io/en/latest/react/)
 1. [Import Vue](https://python-webpack-boilerplate.readthedocs.io/en/latest/vue/)
 

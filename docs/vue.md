@@ -8,7 +8,7 @@
 Go to `frontend` directory
 
 ```bash
-$ npm install vue-loader @vue/compiler-sfc --save-dev
+$ npm install vue-loader@16 @vue/compiler-sfc --save-dev
 # install vue
 $ npm install vue@3
 ```
@@ -16,10 +16,10 @@ $ npm install vue@3
 You will have something like this in your `package.json`
 
 ```js
-"vue-loader": "^16.1.2",
-"@vue/compiler-sfc": "^3.0.7",
+"vue-loader": "^16.8.1",
+"@vue/compiler-sfc": "^3.2.19",
 
-"vue": "^3.0.7"
+"vue": "^3.2.19"
 ```
 
 Edit `frontend/webpack/webpack.common.js`
@@ -149,7 +149,6 @@ src
 │   ├── HelloWorld.vue
 │   └── sidebar.js
 └── styles
-    ├── bootstrap.scss
     └── index.scss
 ```
 

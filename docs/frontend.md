@@ -14,7 +14,7 @@
 
 After creating frontend project from the template, you will have file structures like this.
 
-``` hl_lines="4 8 10 13"
+``` hl_lines="4 8 10 12"
 frontend
 ├── package.json
 ├── src
@@ -25,7 +25,6 @@ frontend
 │   ├── components
 │   │   └── sidebar.js
 │   └── styles
-│       ├── bootstrap.scss
 │       └── index.scss
 ├── vendors
 │   └── images
