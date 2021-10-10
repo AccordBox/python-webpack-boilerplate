@@ -1,5 +1,35 @@
+[tool.poetry]
+name = "python-webpack-boilerplate"
+version = "0.0.5"
+description = "Jump start frontend project bundled by Webpack"
+authors = ["Michael Yin <michaelyin@accordbox.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/AccordBox/python-webpack-boilerplate"
+keywords = ["python", "django", "flask", "webpack"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Flask",
+]
+packages = [
+    { include = "webpack_loader" },
+    { include = "frontend_template" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+cookiecutter = "^1.7.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
 [tool.black]
-target-version = ['py36']
+target-version = ['py37']
 include = '\.pyi?$'
 exclude = '''
 (
