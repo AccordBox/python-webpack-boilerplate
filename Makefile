@@ -10,5 +10,5 @@ publish:
 	poetry publish
 
 # poetry config repositories.testpypi https://test.pypi.org/legacy/
-publish-testpypi:
+publish-test:
 	poetry publish -r testpypi

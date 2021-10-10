@@ -7,10 +7,8 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         from cookiecutter.main import cookiecutter
 
-        root_pkg_path = os.path.dirname(
-            os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-        )
-        app_path = cookiecutter(root_pkg_path, directory="frontend_template")
+        pkg_path = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+        app_path = cookiecutter(pkg_path, directory="frontend_template")
 
         app_name = os.path.basename(app_path)
 

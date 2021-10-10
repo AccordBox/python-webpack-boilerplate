@@ -17,7 +17,6 @@ classifiers = [
 ]
 packages = [
     { include = "webpack_loader" },
-    { include = "frontend_template" },
 ]
 
 [tool.poetry.dependencies]
