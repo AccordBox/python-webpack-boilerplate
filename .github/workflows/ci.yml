@@ -42,6 +42,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Set up Django ${{ matrix.django-version }}
         run: |
+          pip install setuptools
           pip install Django==${{ matrix.django-version }}
       - name: Install dependencies
         run: |
@@ -71,6 +72,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Set up Flask ${{ matrix.flask-version }}
         run: |
+          pip install setuptools
           pip install Flask==${{ matrix.flask-version }}
       - name: Install dependencies
         run: |
