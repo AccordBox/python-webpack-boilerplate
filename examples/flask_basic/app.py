@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 from flask import Flask, render_template
-from webpack_loader.config import setup_jinja2_ext
+from webpack_boilerplate.config import setup_jinja2_ext
 
 
 BASE_DIR = Path(__file__).parent
@@ -17,8 +17,9 @@ setup_jinja2_ext(app)
 @app.cli.command("webpack_init")
 def webpack_init():
     from cookiecutter.main import cookiecutter
-    from webpack_loader import GIT_URL
-    cookiecutter(GIT_URL, directory='frontend_template')
+    import webpack_boilerplate
+    pkg_path = os.path.dirname(webpack_boilerplate.__file__)
+    cookiecutter(pkg_path, directory="frontend_template")
 
 
 @app.route("/")

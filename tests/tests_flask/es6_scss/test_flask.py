@@ -11,7 +11,7 @@ def test_flask(config, npm_project_path, npm_build_commands):
         }
     )
 
-    from webpack_loader.contrib.jinja2ext import javascript_pack, stylesheet_pack
+    from webpack_boilerplate.contrib.jinja2ext import javascript_pack, stylesheet_pack
 
     html = javascript_pack("app", "app2")
     assert re.findall(r"app[.\w]*?.js", html)

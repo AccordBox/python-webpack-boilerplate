@@ -1,19 +1,14 @@
-.PHONY: clean build publish
+.PHONY: docs
 
-clean:
-	@echo "Cleaning..."
-	@find webpack_loader/ -name '*.pyc' -delete
-	@rm -rf ./build ./*egg* ./.coverage ./dist
+docs:
+	mkdocs serve --dev-addr '127.0.0.1:9090'
 
-build: clean
-	@echo "Building..."
-	@pip install -U setuptools
-	@python setup.py sdist bdist_wheel --universal
+build:
+	poetry build
 
-publish: build
-	@echo "Publishing to pypi..."
-	@twine upload dist/*
+publish:
+	poetry publish
 
-publish_test: build
-	@echo "Publishing to test pypi..."
-	@twine upload --repository testpypi dist/*
+# poetry config repositories.testpypi https://test.pypi.org/legacy/
+publish-test:
+	poetry publish -r testpypi

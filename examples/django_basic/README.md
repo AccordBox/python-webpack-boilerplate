@@ -3,10 +3,13 @@
 ## How to run
 
 ```bash
+# install python-webpack-boilerplate
+$ python -m pip install git+https://github.com/AccordBox/python-webpack-boilerplate
+
 # install Django
 $ pip install -r requirements.txt
 
-# go to frontend directory
+# go to frontend directory (whic is soft link in Github repo)
 
 # install frontend dependency
 $ npm install

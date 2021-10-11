@@ -6,6 +6,6 @@ except ImportError:
     AppConfig = NoneType
 
 
-class WebpackLoaderConfig(AppConfig):
-    name = "webpack_loader"
-    verbose_name = "Webpack Loader"
+class WebpackBoilerplateConfig(AppConfig):
+    name = "webpack_boilerplate"
+    verbose_name = "Webpack Boilerplate"

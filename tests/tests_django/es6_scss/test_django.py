@@ -8,7 +8,7 @@ def test_django(settings, npm_project_path, npm_build_commands):
         "MANIFEST_FILE": str(npm_project_path / "build" / "manifest.json"),
     }
 
-    from webpack_loader.templatetags.webpack_loader import (
+    from webpack_boilerplate.templatetags.webpack_loader import (
         javascript_pack,
         stylesheet_pack,
     )

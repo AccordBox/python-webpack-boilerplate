@@ -4,6 +4,4 @@ mkdocs==1.1.2
 mkdocs-material==6.2.8
 
 pre-commit==2.6.0
-
-wheel==0.36.2
-twine==3.4.1
+poetry==1.1.11
