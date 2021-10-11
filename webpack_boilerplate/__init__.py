@@ -1,1 +1,1 @@
-default_app_config = "webpack_loader.apps.WebpackLoaderConfig"
+default_app_config = "webpack_boilerplate.apps.WebpackBoilerplateConfig"

@@ -9,7 +9,7 @@ def load_from_django():
     DEFAULT_CONFIG = {
         "CACHE": not settings.DEBUG,
         "IGNORE": [r".+\.hot-update.js", r".+\.map"],
-        "LOADER_CLASS": "webpack_loader.loader.WebpackLoader",
+        "LOADER_CLASS": "webpack_boilerplate.loader.WebpackLoader",
     }
 
     user_config = dict(DEFAULT_CONFIG, **getattr(settings, "WEBPACK_LOADER", {}))
@@ -24,7 +24,7 @@ def load_from_flask():
     DEFAULT_CONFIG = {
         "CACHE": not current_app.config["DEBUG"],
         "IGNORE": [r".+\.hot-update.js", r".+\.map"],
-        "LOADER_CLASS": "webpack_loader.loader.WebpackLoader",
+        "LOADER_CLASS": "webpack_boilerplate.loader.WebpackLoader",
     }
 
     user_config = dict(DEFAULT_CONFIG, **current_app.config["WEBPACK_LOADER"])
