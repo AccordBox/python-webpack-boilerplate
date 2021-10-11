@@ -16,7 +16,7 @@ classifiers = [
     "Framework :: Flask",
 ]
 packages = [
-    { include = "webpack_loader" },
+    { include = "webpack_boilerplate" },
 ]
 
 [tool.poetry.dependencies]
