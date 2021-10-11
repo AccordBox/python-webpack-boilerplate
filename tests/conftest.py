@@ -14,7 +14,7 @@ def npm_project_path(tmp_path, request):
 
     frontend_project_root = tmp_path
     cookiecutter(
-        str(base_dir / "frontend_template"),
+        str(base_dir / "webpack_boilerplate" / "frontend_template"),
         no_input=True,
         output_dir=str(frontend_project_root),
     )
