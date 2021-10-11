@@ -46,8 +46,7 @@ jobs:
           pip install Django==${{ matrix.django-version }}
       - name: Install dependencies
         run: |
-          pip install poetry
-          poetry install
+          pip install .
           pip install -r tests/requirements/django.txt
       - name: PYTHONPATH
         run: |
@@ -80,8 +79,7 @@ jobs:
           pip install Flask==${{ matrix.flask-version }}
       - name: Install dependencies
         run: |
-          pip install poetry
-          poetry install
+          pip install .
           pip install -r tests/requirements/flask.txt
       - name: PYTHONPATH
         run: |
