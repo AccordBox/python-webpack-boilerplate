@@ -42,12 +42,12 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Set up Django ${{ matrix.django-version }}
         run: |
-          pip install --upgrade setuptools
           pip install --upgrade pip
           pip install Django==${{ matrix.django-version }}
       - name: Install dependencies
         run: |
-          pip install .
+          pip install poetry
+          poetry install
           pip install -r tests/requirements/django.txt
       - name: Test with pytest
         run: |
@@ -73,12 +73,12 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Set up Flask ${{ matrix.flask-version }}
         run: |
-          pip install --upgrade setuptools
           pip install --upgrade pip
           pip install Flask==${{ matrix.flask-version }}
       - name: Install dependencies
         run: |
-          pip install .
+          pip install poetry
+          poetry install
           pip install -r tests/requirements/flask.txt
       - name: Test with pytest
         run: |
