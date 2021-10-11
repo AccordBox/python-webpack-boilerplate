@@ -26,7 +26,7 @@ Next, install package
 $ pip install python-webpack-boilerplate
 ```
 
-Add `webpack_loader` to the `INSTALLED_APPS` in `example/settings.py`
+Add `webpack_boilerplate` to the `INSTALLED_APPS` in `example/settings.py`
 
 ```python hl_lines="9"
 INSTALLED_APPS = [
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'webpack_loader',
+    'webpack_boilerplate',
 ]
 ```
 
