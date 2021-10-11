@@ -51,7 +51,7 @@ jobs:
           pip install -r tests/requirements/django.txt
       - name: Test with pytest
         run: |
-          pytest tests/tests_django
+          poetry run pytest tests/tests_django
 
   test_flask:
     runs-on: ubuntu-latest
@@ -82,4 +82,4 @@ jobs:
           pip install -r tests/requirements/flask.txt
       - name: Test with pytest
         run: |
-          pytest tests/tests_flask
+          poetry run tests/tests_flask
