@@ -6,7 +6,7 @@
 
 ## Goal
 
-**Jump start frontend project bundled by Webpack with Django, Flask quickly**
+**Jump start frontend project bundled by Webpack**
 
 ## What is included.
 
@@ -32,8 +32,12 @@
 
 - React
 - Vue
+- Tailwind CSS
+- Bootstrap (Default theme)
 
 ## Documentation
+
+> NOTE: From v0.0.5, we have renamed the python package from `webpack_loader` to `webpack_boilerplate`.
 
 1. [Setup With Django](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_django/)
 1. [Setup With Flask](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_flask/)
@@ -42,7 +46,13 @@
 1. [Import React](https://python-webpack-boilerplate.readthedocs.io/en/latest/react/)
 1. [Import Vue](https://python-webpack-boilerplate.readthedocs.io/en/latest/vue/)
 
-## If you want to know more about Webpack and Django
+## Special Thanks
+
+* [django-webpack-loader](https://github.com/owais/django-webpack-loader)
+* [rails/webpacker](https://github.com/rails/webpacker)
+* [wbkd/webpack-starter](https://github.com/wbkd/webpack-starter)
+
+## References
 
 1. [Setup Webpack Project with Django](http://www.accordbox.com/blog/setup-webpack-project-django)
 1. [Load Webpack bundles in Django](http://www.accordbox.com/blog/load-webpack-bundles-django)
@@ -51,8 +61,3 @@
 1. [Code splitting with Webpack](http://www.accordbox.com/blog/code-splitting-webpack)
 1. [How to config HMR with Webpack and Django](http://www.accordbox.com/blog/how-config-hmr-webpack-and-django)
 
-## Special Thanks
-
-* [django-webpack-loader](https://github.com/owais/django-webpack-loader)
-* [rails/webpacker](https://github.com/rails/webpacker)
-* [wbkd/webpack-starter](https://github.com/wbkd/webpack-starter)
