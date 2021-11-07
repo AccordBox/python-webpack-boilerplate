@@ -8,6 +8,8 @@
 
 **Jump start frontend project bundled by Webpack**
 
+![](docs/images/readme-head.png)
+
 ## What is included.
 
 1. A `frontend project template` which has good structure, easy to use and customize. You can create the frontend project with just **ONE** command, and use it even you have no idea how to config Webpack.
