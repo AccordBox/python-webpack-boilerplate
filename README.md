@@ -4,8 +4,6 @@
 [![PyPI version](https://badge.fury.io/py/python-webpack-boilerplate.svg)](https://badge.fury.io/py/python-webpack-boilerplate)
 [![Documentation](https://img.shields.io/badge/Documentation-link-green.svg)](https://python-webpack-boilerplate.rtfd.io/)
 
-## Goal
-
 **Jump start frontend project bundled by Webpack**
 
 ![](docs/images/readme-head.png)
