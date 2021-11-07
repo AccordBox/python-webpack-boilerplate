@@ -6,7 +6,7 @@
 
 **Jump start frontend project bundled by Webpack**
 
-![](docs/images/readme-head.svg)
+![](docs/images/readme-head.png)
 
 ## What is included.
 
