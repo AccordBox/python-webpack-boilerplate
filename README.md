@@ -60,4 +60,3 @@
 1. [Load Webpack hash bundle in Django](http://www.accordbox.com/blog/load-webpack-hash-bundle-django)
 1. [Code splitting with Webpack](http://www.accordbox.com/blog/code-splitting-webpack)
 1. [How to config HMR with Webpack and Django](http://www.accordbox.com/blog/how-config-hmr-webpack-and-django)
-

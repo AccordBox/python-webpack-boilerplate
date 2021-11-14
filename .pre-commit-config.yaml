@@ -6,6 +6,8 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: master
     hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
       - id: check-yaml
 
   - repo: https://github.com/psf/black
@@ -30,4 +32,3 @@ repos:
     hooks:
       - id: prettier
         types: [javascript]
-
