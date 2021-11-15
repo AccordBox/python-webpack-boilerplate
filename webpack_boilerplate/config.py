@@ -15,6 +15,7 @@ def load_from_django():
     user_config = dict(DEFAULT_CONFIG, **getattr(settings, "WEBPACK_LOADER", {}))
 
     user_config["ignores"] = [re.compile(I) for I in user_config["IGNORE"]]
+    user_config["web_framework"] = "django"
     return user_config
 
 
@@ -30,6 +31,7 @@ def load_from_flask():
     user_config = dict(DEFAULT_CONFIG, **current_app.config["WEBPACK_LOADER"])
 
     user_config["ignores"] = [re.compile(I) for I in user_config["IGNORE"]]
+    user_config["web_framework"] = "flask"
     return user_config
 
 
