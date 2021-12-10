@@ -46,7 +46,23 @@ class WebpackLoader(object):
                 yield chunk
 
     def get_chunk_url(self, chunk):
-        return chunk["url"]
+        url = chunk["url"]
+
+        if self.config.get("web_framework", None) == "django":
+            from django.contrib.staticfiles.storage import staticfiles_storage
+            from django.conf import settings
+
+            if url.startswith("http"):
+                # webpack dev server
+                return url
+            else:
+                prefix = settings.STATIC_URL
+                url_without_static_prefix = url[
+                    url.startswith(prefix) and len(prefix) :
+                ]
+                return staticfiles_storage.url(url_without_static_prefix)
+        else:
+            return url
 
     def get_bundle(self, bundle_name):
         assets = copy.copy(self.get_assets())
