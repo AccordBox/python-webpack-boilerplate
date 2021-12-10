@@ -1,5 +1,10 @@
 # Change Log
 
+## v0.0.6
+
+1. Makes `webpack_loader` render Django hashed static file
+1. Update `pre-commit-config.yaml`
+
 ## v0.0.5
 
 1. Use `Poetry` to manage project meta info and dependency
