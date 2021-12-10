@@ -1,9 +1,13 @@
 # Change Log
 
-## v0.0.6
+## v0.0.7
 
 1. Makes `webpack_loader` render Django hashed static file
 1. Update `pre-commit-config.yaml`
+
+## v0.0.6
+
+DELETED
 
 ## v0.0.5
 
