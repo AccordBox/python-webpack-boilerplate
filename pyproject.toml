@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python-webpack-boilerplate"
-version = "0.1.1"
+version = "0.0.7"
 description = "Jump start frontend project bundled by Webpack"
 authors = ["Michael Yin <michaelyin@accordbox.com>"]
 license = "MIT"
