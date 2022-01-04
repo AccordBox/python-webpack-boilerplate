@@ -220,3 +220,7 @@ $ python manage.py runserver
 Now check on [http://127.0.0.1:8000/](http://127.0.0.1:8000/) and you should be able to see a welcome page.
 
 The source code can also be found in the [Examples](https://github.com/AccordBox/python-webpack-boilerplate/tree/master/examples/)
+
+## Live Reload
+
+[Live Reload Support](live_reload)
