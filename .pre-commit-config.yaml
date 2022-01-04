@@ -25,10 +25,3 @@ repos:
     hooks:
       - id: flake8
         args: ['--config=setup.cfg']
-
-  # https://pre-commit.com/#regular-expressions
-  - repo: https://github.com/prettier/pre-commit
-    rev: v2.1.2
-    hooks:
-      - id: prettier
-        types: [javascript]

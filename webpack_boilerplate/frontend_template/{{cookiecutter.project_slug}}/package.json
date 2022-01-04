@@ -3,9 +3,15 @@
   "version": "0.0.7",
   "description": "Webpack boilerplate for Django & Flask",
   "scripts": {
+{%- if cookiecutter.run_npm_command_at_root == 'n' %}
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js",
     "start": "webpack serve --config webpack/webpack.config.dev.js",
     "watch": "webpack --watch --config webpack/webpack.config.watch.js"
+{%- else %}
+    "build": "cross-env NODE_ENV=production webpack --config {{ cookiecutter.project_slug }}/webpack/webpack.config.prod.js",
+    "start": "webpack serve --config {{ cookiecutter.project_slug }}/webpack/webpack.config.dev.js",
+    "watch": "webpack --watch --config {{ cookiecutter.project_slug }}/webpack/webpack.config.watch.js"
+{%- endif %}
   },
   "repository": {
     "type": "git",
