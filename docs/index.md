@@ -28,6 +28,8 @@ frontend
 1. Static assets such as images, fonts and other files can be put at `vendors`
 
 ```bash
+$ cd frontend
+
 # install dependency packages
 $ npm install
 # build js, scss files
