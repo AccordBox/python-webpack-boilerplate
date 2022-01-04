@@ -39,8 +39,23 @@ def copy_frontend_config_files():
         os.remove(old_full_path)
 
 
+def update_webpack_path():
+    """
+    Update webpack config file path in package.json
+    """
+    file_path = "package.json"
+    with open(file_path, "r+") as f:
+        file_contents = f.read().replace(
+            "--config webpack/", "--config {{ cookiecutter.project_slug }}/webpack/"
+        )
+        f.seek(0)
+        f.write(file_contents)
+        f.truncate()
+
+
 def main():
     if "{{ cookiecutter.run_npm_command_at_root }}".lower() == "y":
+        update_webpack_path()
         copy_frontend_config_files()
 
     print_success_msg(
