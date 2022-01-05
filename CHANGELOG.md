@@ -1,5 +1,12 @@
 # Change Log
 
+## v0.0.8
+
+1. Drop IE support in `browserslist`
+1. Add `run_npm_command_at_root`, so user can run `npm` command under the root directory instead of the `frontend` directory.
+1. Add `esbuild` support in doc
+1. Add `live reload` feature in doc
+
 ## v0.0.7
 
 1. Makes `webpack_loader` render Django hashed static file
