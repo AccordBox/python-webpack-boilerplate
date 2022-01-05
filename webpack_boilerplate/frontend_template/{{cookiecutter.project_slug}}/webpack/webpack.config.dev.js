@@ -16,7 +16,6 @@ module.exports = merge(common, {
     publicPath: "http://localhost:9091/",
   },
   devServer: {
-    inline: true,
     hot: true,
     host: "0.0.0.0",
     port: 9091,
