@@ -1,5 +1,9 @@
 # Change Log
 
+## v0.0.9
+
+1. Fix missing `postcss.config.js` when `run_npm_command_at_root`
+
 ## v0.0.8
 
 1. Drop IE support in `browserslist`
