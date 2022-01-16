@@ -19,7 +19,7 @@ module.exports = merge(common, {
       "process.env.NODE_ENV": JSON.stringify("development"),
     }),
     new StylelintPlugin({
-      files: Path.join("src", "**/*.s?(a|c)ss"),
+      files: Path.resolve(__dirname, "../src/**/*.s?(a|c)ss"),
     }),
     new ESLintPlugin({
       extensions: "js",
