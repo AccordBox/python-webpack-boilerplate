@@ -1,5 +1,9 @@
 # Change Log
 
+## v0.0.10
+
+1. Fix `stylelint` when `run_npm_command_at_root`
+
 ## v0.0.9
 
 1. Fix missing `postcss.config.js` when `run_npm_command_at_root`
