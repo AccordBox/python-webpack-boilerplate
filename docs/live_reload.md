@@ -2,6 +2,10 @@
 
 With `webpack-dev-server`, we can use it to auto reload web page when the code of the project changed.
 
+```
+npm install webpack-dev-server@4.7.2
+```
+
 Please edit `frontend/webpack/webpack.config.dev.js`
 
 ```js
@@ -11,7 +15,9 @@ devServer: {
   headers: {
     "Access-Control-Allow-Origin": "*",
   },
-  writeToDisk: true,
+  devMiddleware: {
+    writeToDisk: true,
+  },
   watchFiles: [
     Path.join(__dirname, '../../django_app/**/*.py'),
     Path.join(__dirname, '../../django_app/**/*.html'),
