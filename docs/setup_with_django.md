@@ -223,4 +223,5 @@ The source code can also be found in the [Examples](https://github.com/AccordBox
 
 ## Live Reload
 
-[Live Reload Support](live_reload)
+[Live Reload Support](live_reload.md)
+
