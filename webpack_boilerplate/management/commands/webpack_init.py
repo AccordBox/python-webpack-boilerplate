@@ -18,4 +18,4 @@ class Command(BaseCommand):
         if options['no_input']:
             cookiecutter(pkg_path, directory="frontend_template", no_input=True)
         else:
-        	cookiecutter(pkg_path, directory="frontend_template")
+            cookiecutter(pkg_path, directory="frontend_template")
