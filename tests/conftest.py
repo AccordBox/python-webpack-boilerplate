@@ -34,7 +34,7 @@ def npm_project_path(tmp_path, request):
     yield frontend_project_path
 
 
-@pytest.fixture(params=["start", "watch", "build"])
+@pytest.fixture(params=["build", "watch", "start"])
 def npm_build_commands(npm_project_path, request):
     command = [NPM_BIN_PATH, "run", request.param]
     process = subprocess.Popen(
