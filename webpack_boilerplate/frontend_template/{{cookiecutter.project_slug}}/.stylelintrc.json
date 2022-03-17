@@ -3,6 +3,6 @@
   "rules": {
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
-    "scss/at-import-partial-extension": "always"
+    "scss/at-import-partial-extension": null
   }
 }
