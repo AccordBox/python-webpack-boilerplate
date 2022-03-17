@@ -50,7 +50,7 @@ def npm_build_commands(npm_project_path, request):
             print(output.strip())
         if re.findall(r"webpack ([\d.]+) compiled (.+?) in (\d+) ms", output):
             break
-        if datetime.datetime.now() - run_time > datetime.timedelta(seconds=60):
+        if datetime.datetime.now() - run_time > datetime.timedelta(seconds=80):
             # if the webpack not finish in 60 seconds
             raise Exception("Webpack compile failed")
 
