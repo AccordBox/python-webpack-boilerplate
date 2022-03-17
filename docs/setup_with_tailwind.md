@@ -1,5 +1,7 @@
 # Tailwind CSS
 
+This guide will help you install and config `Tailwind v3`
+
 ## Install Dependency
 
 Go to `frontend` directory
@@ -35,15 +37,53 @@ Now `tailwind.config.js` is generated
 
 ```js
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: [],
   theme: {
     extend: {},
   },
-  variants: {},
   plugins: [],
 }
 ```
+
+## JIT
+
+From Tailwind V3, it enabled `JIT` (Just-in-Time) all the time.
+
+> Tailwind CSS works by scanning all of your HTML, JavaScript components, and any other template files for class names, then generating all of the corresponding CSS for those styles.
+
+> In order for Tailwind to generate all of the CSS you need, it needs to know about every single file in your project that contains any Tailwind class names.
+
+So we should config `content` section of the `tailwind.config.js`, then Tailwind will know which css classes are used.
+
+Let's update *frontend/tailwind.config.js*
+
+```js
+const Path = require("path");
+const pwd = process.env.PWD;
+
+// We can add current project paths here
+const projectPaths = [
+  Path.join(pwd, "../example/templates/**/*.html"),
+  // add js file paths if you need
+];
+
+const contentPaths = [...projectPaths];
+console.log(`tailwindcss will scan ${contentPaths}`);
+
+module.exports = {
+  content: contentPaths,
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+Notes:
+
+1. Here we add Django templates path to the `projectPaths`
+1. And then we pass the `contentPaths` to the `content`
+1. The final built css file will contain css classes used in the Django templates
 
 ## App.js
 
@@ -75,12 +115,18 @@ Update *src/styles/index.scss*
 }
 
 .btn-blue {
-  @apply inline-block py-4 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  @apply inline-block px-4 py-2;
+  @apply font-semibold rounded-lg shadow-md;
+  @apply bg-blue-500 text-white;
+  @apply hover:bg-blue-700 focus:outline-none;
+  @apply focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
 }
 ```
 
 ```
 $ npm run start
+
+tailwindcss will scan django_basic/example/templates/**/*.html
 ```
 
 Edit Django template `templates/index.html`
@@ -123,48 +169,14 @@ Edit Django template `templates/index.html`
 $ python manage.py runserver
 ```
 
-## Better performance
+![TailwindCSS example](images/tailwind-example.png)
 
-The default tailwindcss file size is a little big, let's improve it for better performance
+## Live Reload
 
-Update `tailwind.config.js`
+When you add Tailwind css class in Django template, it would be cool if the page can `auto live realod`, please check link below
 
-```js
-const Path = require("path");
+[Live Reload Support](live_reload.md)
 
-const pwd = process.env.PWD;
-const purgePaths = [
-  Path.join(pwd, "../example/templates/**/*.html"),
-];
-console.log(`tailwindcss purge by scanning ${purgePaths}`);
+## Tutorials
 
-module.exports = {
-  mode: 'jit',
-  purge: purgePaths,
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
-}
-```
-
-1. We set `purge` by passing `purgePaths`, here we passed `example` Django project template dir so tailwind will scan the templates to know which classes are used. Unused css will be removed from final bundle file.
-1. **You might need to edit the `purgePaths` to include other Django app templates or JS file**   
-1. We `Enabling JIT mode` by using `mode: 'jit'`
-
-## Plugins
-
-Feel free to install below plugins as you like:
-
-1. [https://github.com/tailwindlabs/tailwindcss-typography](https://github.com/tailwindlabs/tailwindcss-typography)
-1. [https://github.com/tailwindlabs/tailwindcss-forms](https://github.com/tailwindlabs/tailwindcss-forms)
-1. [https://github.com/tailwindlabs/tailwindcss-aspect-ratio](https://github.com/tailwindlabs/tailwindcss-aspect-ratio)
-1. [https://github.com/tailwindlabs/tailwindcss-line-clamp](https://github.com/tailwindlabs/tailwindcss-line-clamp)
-
-## Form
-
-To render Django form which work with tailwind, please check [https://github.com/django-crispy-forms/crispy-tailwind](https://github.com/django-crispy-forms/crispy-tailwind)
+To learn more about Tailwind and Django, you can check [Django Tailwind CSS Alpine.js Tutorial](https://www.accordbox.com/blog/django-tailwind-css-alpinejs-tutorial/)
