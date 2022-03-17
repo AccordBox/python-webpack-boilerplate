@@ -130,3 +130,7 @@ If you change JS or SCSS files, the web page would auto refresh after the change
 
 1. If you are developing, use `npm run watch` or `npm run start`
 1. You should use `npm run build` in deployment
+
+## Deployment Notes
+
+[Deployment Notes](deployment.md)
