@@ -1,4 +1,5 @@
 import jinja2.ext
+from markupsafe import Markup
 
 from .. import utils
 
@@ -15,7 +16,7 @@ def stylesheet_pack(*names, **kwargs):
         for sub_tag in sub_tags:
             if sub_tag not in tags:
                 tags.append(sub_tag)
-    return jinja2.Markup("\n".join(tags))
+    return Markup("\n".join(tags))
 
 
 def javascript_pack(*names, **kwargs):
@@ -30,7 +31,7 @@ def javascript_pack(*names, **kwargs):
         for sub_tag in sub_tags:
             if sub_tag not in tags:
                 tags.append(sub_tag)
-    return jinja2.Markup("\n".join(tags))
+    return Markup("\n".join(tags))
 
 
 class WebpackExtension(jinja2.ext.Extension):
