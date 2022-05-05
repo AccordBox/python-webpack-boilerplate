@@ -72,9 +72,9 @@ frontend
 
 ```bash
 $ node -v
-v14.18.0
+v16.13.1
 $ npm -v
-6.14.15
+8.1.2
 ```
 
 Now go to `frontend`

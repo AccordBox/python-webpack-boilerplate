@@ -19,6 +19,7 @@ module.exports = {
     path: Path.join(__dirname, "../build"),
     filename: "js/[name].js",
     publicPath: "/static/",
+    assetModuleFilename: "[path][name][ext]",
   },
   optimization: {
     splitChunks: {
@@ -55,12 +56,7 @@ module.exports = {
       },
       {
         test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        use: {
-          loader: "file-loader",
-          options: {
-            name: "[path][name].[ext]",
-          },
-        },
+        type: "asset",
       },
     ],
   },

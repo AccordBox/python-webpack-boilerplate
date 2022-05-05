@@ -1,9 +1,29 @@
 import datetime
+import os
 import re
+import signal
 import subprocess
 
 import pytest
 from tests.config import NPM_BIN_PATH
+
+
+def kill_process(name):
+    """
+    The web dev server can not be killed by process.kill()
+    So we use this to kill the webpack dev server
+    """
+    try:
+        for line in os.popen("ps -e | grep " + name + " | grep -v grep"):
+            if "pytest" in line:
+                # ignore
+                continue
+            fields = line.split()
+            pid = fields[0]
+            os.kill(int(pid), signal.SIGKILL)
+        print("Process Successfully terminated")
+    except Exception:
+        print("Error Encountered while running script")
 
 
 @pytest.fixture
@@ -34,8 +54,10 @@ def npm_project_path(tmp_path, request):
     yield frontend_project_path
 
 
-@pytest.fixture(params=["start", "watch", "build"])
+@pytest.fixture(params=["start"])
 def npm_build_commands(npm_project_path, request):
+    kill_process("webpack")
+
     command = [NPM_BIN_PATH, "run", request.param]
     process = subprocess.Popen(
         command,
@@ -58,3 +80,4 @@ def npm_build_commands(npm_project_path, request):
 
     # kill the npm command
     process.kill()
+    kill_process("webpack")
