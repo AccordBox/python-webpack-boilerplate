@@ -1,5 +1,12 @@
 # Change Log
 
+## v1.0.0
+
+1. Upgrade nearly all frontend dependency package.
+1. Drop `file-loader`, use `Webpack Asset` instead
+1. Remove deprecated package `babel/polyfil`
+1. Update Tailwind doc for v3
+
 ## v0.0.10
 
 1. Fix `stylelint` when `run_npm_command_at_root`
