@@ -1,6 +1,6 @@
 {
   "name": "python-webpack-boilerplate",
-  "version": "0.0.10",
+  "version": "1.0.0",
   "description": "Webpack boilerplate for Django & Flask",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js",
