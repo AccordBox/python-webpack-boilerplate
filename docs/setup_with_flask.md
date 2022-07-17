@@ -106,7 +106,7 @@ BASE_DIR = Path(__file__).parent
 app = Flask(__name__, static_folder="frontend/build", static_url_path="/static/")
 app.config.update({
     'WEBPACK_LOADER': {
-        'MANIFEST_FILE': os.path.join(BASE_DIR, "frontend/build/manifest.json"),
+        'MANIFEST_FILE': BASE_DIR / "frontend/build/manifest.json",
     }
 })
 setup_jinja2_ext(app)
