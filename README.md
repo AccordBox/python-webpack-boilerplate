@@ -23,6 +23,14 @@ When using `django-webpack-loader`, you need to create `Webpack` project on your
 - Autoprefixing of browserspecific CSS rules via [postcss](https://postcss.org/) and [postcss-preset-env](https://github.com/csstools/postcss-preset-env)
 - Style Linting via [stylelint](https://stylelint.io/)
 
+----
+
+If you want to import **lightweight modern frontend solution** to your web app, or you do not like **heavy framework** such as React, Vue.
+
+Please check my book [The Definitive Guide to Hotwire and Django](https://leanpub.com/hotwire-django)
+
+----
+
 ## Documentation
 
 1. [Setup With Django](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_django/)
