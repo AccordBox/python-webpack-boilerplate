@@ -1,5 +1,9 @@
 # Change Log
 
+## v1.0.1
+
+1. Upgrade some frontend dependency
+
 ## v1.0.0
 
 1. Upgrade nearly all frontend dependency package.
