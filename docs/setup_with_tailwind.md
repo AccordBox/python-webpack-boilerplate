@@ -4,7 +4,7 @@ This guide will help you install and config `Tailwind v3`
 
 ## Install Dependency
 
-Go to `frontend` directory
+In directory which contains the `package.json`, install `tailwindcss` and `postcss-import`
 
 ```bash
 $ npm install -D tailwindcss@latest postcss-import
@@ -44,6 +44,10 @@ module.exports = {
   plugins: [],
 }
 ```
+
+!!! note
+
+    Please make sure `tailwind.config.js` exists in the same directory as `postcss.config.js`
 
 ## JIT
 
@@ -179,4 +183,7 @@ When you add Tailwind css class in Django template, it would be cool if the page
 
 ## Tutorials
 
-To learn more about Tailwind and Django, you can check [Django Tailwind CSS Alpine.js Tutorial](https://www.accordbox.com/blog/django-tailwind-css-alpinejs-tutorial/)
+To learn more about Tailwind and Django, you can check
+
+1. [wagtail-tailwind-blog](https://github.com/AccordBox/wagtail-tailwind-blog)
+2. [Django Tailwind CSS Alpine.js Tutorial](https://www.accordbox.com/blog/django-tailwind-css-alpinejs-tutorial/)
