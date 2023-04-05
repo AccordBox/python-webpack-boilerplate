@@ -23,4 +23,5 @@ nav:
   - Import React: react.md
   - Import Vue: vue.md
   - Use esbuild: esbuild.md
+  - Typescript: typescript.md
   - Deployment Notes: deployment.md
