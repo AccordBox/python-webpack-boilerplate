@@ -61,9 +61,9 @@ frontend
 
 ```bash
 $ node -v
-v18.12.1
+v20.9.0
 $ npm -v
-8.19.2
+10.1.0
 ```
 
 Now go to `frontend`
@@ -166,7 +166,7 @@ Add `index.html` to `templates`
   </div>
 </div>
 
-{{ javascript_pack('app', 'app2', attrs='charset="UTF-8"') }}
+{{ javascript_pack('app', attrs='charset="UTF-8"') }}
 
 </body>
 </html>

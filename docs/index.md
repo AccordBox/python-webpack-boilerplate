@@ -32,18 +32,19 @@ $ cd frontend
 
 # install dependency packages
 $ npm install
+
 # build js, scss files
 $ npm run start
 ```
 
-Now you can load bundle file in templates like
+Now you can load bundle js and css files in template
 
 ```html
 {% stylesheet_pack 'app' %}
-{% javascript_pack 'app' 'app2' attrs='charset="UTF-8"' %}
+{% javascript_pack 'app' %}
 ```
 
 !!! note
-    1. You can import multiple entry files using one `javascript_pack` statement
+    1. You can import **multiple entry files** using `stylesheet_pack` and `javascript_pack` (`{% javascript_pack 'app' 'app2'`)
     1. The `javascript_pack` would also **import dependency files automatically to handle code splitting**
-    1. You can use `attrs` to set custom attributes
+    1. You can use `attrs` to set custom attributes, (`{% javascript_pack 'app' attrs='charset="UTF-8"' %}`)
