@@ -166,7 +166,7 @@ Add `index.html` to `templates`
   </div>
 </div>
 
-{{ javascript_pack('app', 'app2', attrs='charset="UTF-8"') }}
+{{ javascript_pack('app', attrs='charset="UTF-8"') }}
 
 </body>
 </html>

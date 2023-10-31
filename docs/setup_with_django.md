@@ -198,7 +198,7 @@ Add `index.html` to the above `example/templates`
   </div>
 </div>
 
-{% javascript_pack 'app' 'app2' attrs='charset="UTF-8"' %}
+{% javascript_pack 'app' %}
 
 </body>
 </html>
