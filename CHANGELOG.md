@@ -1,5 +1,11 @@
 # Change Log
 
+## v1.0.2
+
+1. Support Node LTS Iron
+2. Upgrade some frontend dependency
+3. Switch from `@babel/plugin-proposal-class-properties` to `@babel/plugin-transform-class-properties`
+
 ## v1.0.1
 
 1. Upgrade some frontend dependency
