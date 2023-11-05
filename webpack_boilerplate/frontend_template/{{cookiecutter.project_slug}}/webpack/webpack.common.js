@@ -6,10 +6,18 @@ const WebpackAssetsManifest = require("webpack-assets-manifest");
 
 const getEntryObject = () => {
   const entries = {};
-  glob.sync(Path.join(__dirname, "../src/application/*.js")).forEach((path) => {
-    const name = Path.basename(path, ".js");
-    entries[name] = path;
-  });
+  // for javascript/typescript entry file
+  glob
+    .sync(Path.join(__dirname, "../src/application/*.{js,ts}"))
+    .forEach((path) => {
+      const name = Path.basename(path);
+      const extension = Path.extname(path);
+      const entryName = name.replace(extension, "");
+      if (entryName in entries) {
+        throw new Error(`Entry file conflict: ${entryName}`);
+      }
+      entries[entryName] = path;
+    });
   return entries;
 };
 
