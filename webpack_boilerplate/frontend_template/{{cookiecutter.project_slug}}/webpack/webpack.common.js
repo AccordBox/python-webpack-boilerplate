@@ -6,9 +6,13 @@ const WebpackAssetsManifest = require("webpack-assets-manifest");
 
 const getEntryObject = () => {
   const entries = {};
-  glob.sync(Path.join(__dirname, "../src/application/*.js")).forEach((path) => {
-    const name = Path.basename(path, ".js");
-    entries[name] = path;
+  glob.sync(Path.join(__dirname, "../src/application/*.{js}")).forEach((path) => {
+
+    const name = Path.basename(path);
+    const extension = Path.extname(path);
+    const entryName = name.replace(extension, '');
+
+    entries[entryName] = path;
   });
   return entries;
 };
