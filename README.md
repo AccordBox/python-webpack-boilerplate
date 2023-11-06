@@ -34,8 +34,18 @@ Please check my book [The Definitive Guide to Hotwire and Django](https://leanpu
 ## Documentation
 
 1. [Setup With Django](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_django/)
-1. [Setup With Flask](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_flask/)
-1. [Frontend Workflow](https://python-webpack-boilerplate.readthedocs.io/en/latest/frontend/)
+2. [Setup With Flask](https://python-webpack-boilerplate.readthedocs.io/en/latest/setup_with_flask/)
+3. [Frontend Workflow](https://python-webpack-boilerplate.readthedocs.io/en/latest/frontend/)
+
+## Raising funds
+
+If you like this project, please consider supporting my work. [Open Collective](https://opencollective.com/python-webpack-boilerplate)
+
+---
+
+<a href="https://opencollective.com/python-webpack-boilerplate#backers" target="_blank"><img src="https://opencollective.com/python-webpack-boilerplate/backers.svg?width=890"></a>
+
+---
 
 ## Special Thanks
 
