@@ -17,12 +17,13 @@ nav:
   - Setup With Django: setup_with_django.md
   - Setup With Flask: setup_with_flask.md
   - Frontend workflow: frontend.md
-  - Run NPM command at root directory: run_npm_command_at_root.md
   - Live Reload: live_reload.md
   - Tailwind CSS: setup_with_tailwind.md
-  - Import React: react.md
-  - Import Vue: vue.md
+  - Bootstrap: setup_with_bootstrap.md
+  - React: react.md
+  - Vue: vue.md
   - Use SWC: swc.md
   - Use ESBuild: esbuild.md
   - Typescript: typescript.md
   - Deployment Notes: deployment.md
+  - Run NPM command at root directory: run_npm_command_at_root.md

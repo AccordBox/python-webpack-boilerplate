@@ -8,4 +8,4 @@ Please check [How to add Typescript to the Django Project](https://www.accordbox
 
 Or you can just use SWC to compile Typescript code
 
-[Use SWC](swc)
+[Use SWC](swc.md)

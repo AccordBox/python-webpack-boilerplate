@@ -1,5 +1,8 @@
 # Run NPM command at root directory
 
+!!! note
+    This feature is turned on by default since `1.0.3`
+
 By default, the `package.json` will be placed at the `frontend` directory, which means, you need to run `npm` command under the `frontend` directory.
 
 If you do not like this and want to run `npm` command at the root directory.
