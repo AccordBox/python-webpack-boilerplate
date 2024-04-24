@@ -2,16 +2,17 @@
 
 ## Install Dependency
 
-Go to `frontend` directory
+Now go to directory which contains `package.json`, by default, it is root directory.
 
 ```bash
 $ npm install @babel/preset-react eslint-plugin-react --save-dev
 ```
 
-Once done, edit `frontend/.babelrc` to make babel to use the above `@babel/preset-react`
+Once done, edit `.babelrc` to make babel to use the above `@babel/preset-react`
 
-```json hl_lines="10"
+```json hl_lines="11"
 {
+   ...
   "presets": [
     [
       "@babel/preset-env",
@@ -22,10 +23,7 @@ Once done, edit `frontend/.babelrc` to make babel to use the above `@babel/prese
     ],
     "@babel/preset-react"
   ],
-  "plugins": [
-    "@babel/plugin-syntax-dynamic-import",
-    "@babel/plugin-proposal-class-properties"
-  ]
+  ...
 }
 ```
 
@@ -33,22 +31,12 @@ Edit `.eslintrc` to add `plugin:react/recommended` to the `extends`, so `eslint`
 
 ```js hl_lines="5"
 {
-  "parser": "babel-eslint",
+  ...
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended"
   ],
-  "env": {
-    "browser": true,
-    "node": true
-  },
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module"
-  },
-  "rules": {
-    "semi": 2
-  }
+  ...
 }
 ```
 
@@ -62,55 +50,37 @@ That is it, now the frontend project can work with React.
 
 ## Sample App
 
-Update `frontend/src/application/app2.js`
+Create `frontend/src/application/app_react.js`
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState, useEffect } from 'react';
+import { createRoot } from 'react-dom';
 
-class Clock extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {date: new Date()};
-  }
 
-  componentDidMount() {
-    this.timerID = setInterval(
-      () => this.tick(),
-      1000
-    );
-  }
+const Clock = () => {
+  const [time, setTime] = useState(new Date());
 
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
 
-  tick() {
-    this.setState({
-      date: new Date()
-    });
-  }
+    // Clear the interval when the component unmounts
+    return () => clearInterval(timer);
+  }, []);
 
-  render() {
-    return (
-      <div>
-        <h1>Hello, world!</h1>
-        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <h1>Current Time:</h1>
+      <p>{time.toLocaleTimeString()}</p>
+    </div>
+  );
+};
 
-ReactDOM.render(
-  <Clock />,
-  document.getElementById('root')
-);
+const root = document.getElementById('root');
+const rootElement = createRoot(root);
+rootElement.render(<Clock />);
 ```
-
-This is a simple Clock React component come from [React doc](https://reactjs.org/docs/state-and-lifecycle.html)
-
-!!! note
-    You can also put the React components code to the `src/components` and import the component in entryfiles. (`app2.js` in this case)
 
 ```
 $ npm run start
@@ -118,7 +88,7 @@ $ npm run start
 
 Edit Django template `templates/index.html`
 
-```html hl_lines="26-27 29"
+```html hl_lines="25-26"
 {% load webpack_loader static %}
 
 <!DOCTYPE html>
@@ -126,35 +96,32 @@ Edit Django template `templates/index.html`
 <head>
   <meta charset="utf-8" />
   <title>Index</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   {% stylesheet_pack 'app' %}
+  {% javascript_pack 'app' 'app_react' attrs='defer' %}
 </head>
 <body>
 
-<div class="jumbotron py-5">
-  <div class="container">
-    <h1 class="display-3">Hello, world!</h1>
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a
-      jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-
-    <div class="d-flex justify-content-center">
-      <img src="{% static 'vendors/images/webpack.png' %}" class="img-fluid"/>
+<div class="bg-gray-50 py-5" data-jumbotron>
+  <div class="container mx-auto px-4 py-10">
+    <h1 class="text-4xl font-bold leading-tight">Welcome to Our Website</h1>
+    <p class="mt-4 text-lg">This is a hero section built using Tailwind CSS.</p>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-6 rounded-lg">Get Started</button>
+    <div class="flex justify-center">
+      <img src="{% static 'vendors/images/webpack.png' %}"/>
     </div>
-
   </div>
 </div>
 
 <div id="root">
 </div>
 
-{% javascript_pack 'app' 'app2' %}
-
 </body>
 </html>
 ```
 
 1. We added a `root` div to let React render the component.
-1. We use `{% javascript_pack 'app' 'app2' %}` to load two entrypoint files to the template.
+1. We use `{% javascript_pack 'app' 'app_react' attrs='defer' %}` to load two entrypoint files to the template.
 
 ```bash
 $ python manage.py runserver
@@ -165,4 +132,4 @@ $ python manage.py runserver
 
 Here is the screenshot:
 
-![React example](images/react-example.png)
+![React example](images/react-example.jpg)

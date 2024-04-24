@@ -5,21 +5,12 @@
 !!! note
     We will setup Vue 3 in this tutorial
 
-Go to `frontend` directory
+Now go to directory which contains `package.json`, by default, it is root directory.
 
 ```bash
-$ npm install vue-loader@16 @vue/compiler-sfc --save-dev
+$ npm install vue-loader@next @vue/compiler-sfc --save-dev
 # install vue
 $ npm install vue@3
-```
-
-You will have something like this in your `package.json`
-
-```js
-"vue-loader": "^16.8.1",
-"@vue/compiler-sfc": "^3.2.19",
-
-"vue": "^3.2.19"
 ```
 
 Edit `frontend/webpack/webpack.common.js`
@@ -128,7 +119,7 @@ export default {
 
 In the `App.vue`, we import `HelloWorld.vue` and render it under `<div id="app">`
 
-Edit `frontend/src/application/app2.js`
+Create `frontend/src/application/app_vue.js`
 
 ```js
 import { createApp } from 'vue';
@@ -140,25 +131,12 @@ createApp(App).mount('#app');
 Now the file structures would seem like this:
 
 ```
-src
-├── application
-│   ├── app.js
-│   └── app2.js
-├── components
-│   ├── App.vue
-│   ├── HelloWorld.vue
-│   └── sidebar.js
-└── styles
-    └── index.scss
-```
-
-```
 $ npm run start
 ```
 
 Edit Django template `templates/index.html`
 
-```django hl_lines="8 28"
+```html hl_lines="9 10"
 {% load webpack_loader static %}
 
 <!DOCTYPE html>
@@ -166,27 +144,25 @@ Edit Django template `templates/index.html`
 <head>
   <meta charset="utf-8" />
   <title>Index</title>
-  {% stylesheet_pack 'app' 'app2' %}
+  <script src="https://cdn.tailwindcss.com"></script>
+  {% stylesheet_pack 'app' 'app_vue' %}
+  {% javascript_pack 'app' 'app_vue' attrs='defer' %}
 </head>
 <body>
 
-<div class="jumbotron py-5">
-  <div class="container">
-    <h1 class="display-3">Hello, world!</h1>
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a
-      jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-
-    <div class="d-flex justify-content-center">
-      <img src="{% static 'vendors/images/webpack.png' %}" class="img-fluid"/>
+<div class="bg-gray-50 py-5" data-jumbotron>
+  <div class="container mx-auto px-4 py-10">
+    <h1 class="text-4xl font-bold leading-tight">Welcome to Our Website</h1>
+    <p class="mt-4 text-lg">This is a hero section built using Tailwind CSS.</p>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-6 rounded-lg">Get Started</button>
+    <div class="flex justify-center">
+      <img src="{% static 'vendors/images/webpack.png' %}"/>
     </div>
-
   </div>
 </div>
 
-<div id="app"></div>
-
-{% javascript_pack 'app' 'app2' %}
+<div id="app">
+</div>
 
 </body>
 </html>
@@ -199,4 +175,4 @@ $ python manage.py runserver
 !!! note
     Here we use Vue to render specific component in the page, and we can still use raw HTML to write other parts, which is convenient
 
-![Vue example](images/vue-example.png)
+![Vue example](images/vue-example.jpg)
