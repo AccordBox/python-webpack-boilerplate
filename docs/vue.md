@@ -8,7 +8,7 @@
 Now go to directory which contains `package.json`, by default, it is root directory.
 
 ```bash
-$ npm install vue-loader@next @vue/compiler-sfc --save-dev
+$ npm install vue-loader @vue/compiler-sfc --save-dev
 # install vue
 $ npm install vue@3
 ```
