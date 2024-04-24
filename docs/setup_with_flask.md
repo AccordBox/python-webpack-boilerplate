@@ -34,21 +34,24 @@ Here we created a `webpack_init` custom command to help us create `frontend` pro
 
 ```bash
 $ env FLASK_APP=app.py flask webpack_init
-# here we use the default frontend slug
+
 project_slug [frontend]:
+run_npm_command_at_root [y]:
+[SUCCESS]: Frontend app 'frontend' has been created.
 ```
 
 Now a new `frontend` directory is created which contains pre-defined files for our frontend project.
 
-```
-frontend
-├── README.md
+```bash
+├── frontend
+│   ├── src
+│   ├── vendors
+│   └── webpack
+├── manage.py
 ├── package-lock.json
 ├── package.json
 ├── postcss.config.js
-├── src
-├── vendors
-└── webpack
+└── requirements.txt
 ```
 
 ## Frontend
@@ -66,11 +69,12 @@ $ npm -v
 10.1.0
 ```
 
-Now go to `frontend`
+Now go to directory which contains `package.json`, by default, it is root directory.
 
 ```bash
 # install dependency packages
 $ npm install
+
 # run webpack in watch mode
 $ npm run watch
 ```
@@ -141,38 +145,35 @@ Add `index.html` to `templates`
     └── index.html
 ```
 
-```html hl_lines="7 19 25"
+```html
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
   <title>Index</title>
-
+  <script src="https://cdn.tailwindcss.com"></script>
   {{ stylesheet_pack('app') }}
+  {{ javascript_pack('app', attrs='defer') }}
 </head>
 <body>
 
-<div class="jumbotron py-5">
-  <div class="container">
-    <h1 class="display-3">Hello, world!</h1>
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a
-      jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-
-    <div class="d-flex justify-content-center">
-      <img src="{{ url_for('static', filename='vendors/images/webpack.png') }}" class="img-fluid"/>
+<div class="bg-gray-50 py-5" data-jumbotron>
+  <div class="container mx-auto px-4 py-10">
+    <h1 class="text-4xl font-bold leading-tight">Welcome to Our Website</h1>
+    <p class="mt-4 text-lg">This is a hero section built using Tailwind CSS.</p>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-6 rounded-lg">Get Started</button>
+    <div class="flex justify-center">
+      <img src="{{ url_for('static', filename='vendors/images/webpack.png') }}"/>
     </div>
-
   </div>
 </div>
-
-{{ javascript_pack('app', attrs='charset="UTF-8"') }}
 
 </body>
 </html>
 ```
 
 !!! note
+    1. Here we use `Tailwind CDN` to help user to do quick test, please remove it later.
     1. You can import multiple entry files using one `javascript_pack` statement
     1. The `javascript_pack` would also **import dependency files automatically to handle code splitting**
     1. You can use `attrs` to set custom attributes
