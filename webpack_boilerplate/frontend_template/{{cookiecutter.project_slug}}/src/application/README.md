@@ -3,7 +3,7 @@ When Webpacker compiles your JavaScript code, it scans the `src/application` dir
 For the `application/app.js`, you can import it in template like this:
 
 ```
-{% javascript_pack 'app' attrs='charset="UTF-8"' %}
+{% raw %}{% javascript_pack 'app' attrs='charset="UTF-8"' %}{% endraw %}
 ```
 
 In most cases, you do not need to create another file in this directory.
