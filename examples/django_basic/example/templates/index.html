@@ -5,26 +5,22 @@
 <head>
   <meta charset="utf-8" />
   <title>Index</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   {% stylesheet_pack 'app' %}
+  {% javascript_pack 'app' attrs='defer' %}
 </head>
 <body>
 
-<div class="jumbotron py-5">
-  <div class="container">
-    <h1 class="display-3">Hello, world!</h1>
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a
-      jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-
-    <div class="d-flex justify-content-center">
-      <img src="{% static 'vendors/images/webpack.png' %}" class="img-fluid"/>
+<div class="bg-gray-50 py-5" data-jumbotron>
+  <div class="container mx-auto px-4 py-10">
+    <h1 class="text-4xl font-bold leading-tight">Welcome to Our Website</h1>
+    <p class="mt-4 text-lg">This is a hero section built using Tailwind CSS.</p>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-6 rounded-lg">Get Started</button>
+    <div class="flex justify-center">
+      <img src="{% static 'vendors/images/webpack.png' %}"/>
     </div>
-
   </div>
 </div>
 
-{% javascript_pack 'app' 'app2' attrs='charset="UTF-8"' %}
-
 </body>
 </html>
-
