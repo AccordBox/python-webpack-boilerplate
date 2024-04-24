@@ -2,10 +2,6 @@
 
 With `webpack-dev-server`, we can use it to auto reload web page when the code of the project changed.
 
-```
-npm install webpack-dev-server@4
-```
-
 Please edit `frontend/webpack/webpack.config.dev.js`
 
 ```js
@@ -27,8 +23,9 @@ devServer: {
 
 Notes:
 
-1. Remove `hot: true` from the `devServer` section
-1. Then you should config the `watchFiles`
+1. Add `watchFiles` to the `devServer` object.
 1. Here we tell `webpack-dev-server` to watch all `.py` and `.html` files under the `django_app` directory.
+
+Run Webpack dev server with `npm run start`
 
 Now if we change code in the editor, the web page will live reload, which is awesome!
