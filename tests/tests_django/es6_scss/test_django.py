@@ -13,9 +13,9 @@ def test_django(settings, npm_project_path, npm_build_commands):
         stylesheet_pack,
     )
 
-    html = javascript_pack("app", "app2")
+    html = javascript_pack("app", "app_test")
     assert re.findall(r"app[.\w]*?.js", html)
-    assert re.findall(r"app2[.\w]*?.js", html)
+    assert re.findall(r"app_test[.\w]*?.js", html)
     # also load dependency
     assert len(re.findall(r"<script", html)) > 2
 
