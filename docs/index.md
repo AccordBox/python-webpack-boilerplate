@@ -1,8 +1,6 @@
 # Introduction
 
-This project help developers **Jump start frontend project bundled by Webpack**
-
-So developers can quickly enjoy the modern frontend techs, within minutes.
+![](./images/readme-head.svg)
 
 ## Setup
 
