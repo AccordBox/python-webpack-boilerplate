@@ -3,6 +3,7 @@ site_url: https://python-webpack-boilerplate.readthedocs.io/
 repo_url: https://github.com/AccordBox/python-webpack-boilerplate
 theme:
   name: "material"
+  custom_dir: material/overrides
   palette:
     primary: teal
 markdown_extensions:
