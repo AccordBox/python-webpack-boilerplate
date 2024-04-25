@@ -4,7 +4,7 @@
 
 1. Remove `Bootstrap` from the default setup.
 2. Update doc about `Bootstrap`, `SWC`, `React`, `Vue`
-6. Update frontend dependency to the latest version
+3. Update frontend dependency to the latest version
 
 ## v1.0.2
 
