@@ -1,50 +1,33 @@
 # Introduction
 
-## Usage
+![](./images/readme-head.svg)
 
-After [creating frontend project from the template](frontend), you will have file structures like this.
+## Setup
 
-``` hl_lines="4 8 10 12"
-frontend
-├── package.json
-├── src
-│   ├── application
-│   │   # webpack entry files here
-│   │   ├── app.js
-│   │   └── app2.js
-│   ├── components
-│   │   └── sidebar.js
-│   └── styles
-│       └── index.scss
-├── vendors
-│   └── images
-│       ├── sample.jpg
-│       └── webpack.png
-```
+1. [Setup with Django](setup_with_django.md)
+1. [Setup with Flask](setup_with_flask.md)
 
-1. You can create entry file in `src/application` (This project would detect the entry files automatically so you do not need to config Webpack)
-1. Reusable components can be placed at `src/components`
-1. SCSS and CSS code can be put at `src/styles`
-1. Static assets such as images, fonts and other files can be put at `vendors`
+## Style Solutions
 
-```bash
-$ cd frontend
+1. [Tailwind CSS](setup_with_tailwind.md)
+2. [Bootstrap](setup_with_bootstrap.md)
 
-# install dependency packages
-$ npm install
+## Features
 
-# build js, scss files
-$ npm run start
-```
+1. [Frontend Workflow](frontend.md)
+2. [Live Reload](live_reload.md)
+3. [Typescript](typescript.md)
 
-Now you can load bundle js and css files in template
+## Advanced
 
-```html
-{% stylesheet_pack 'app' %}
-{% javascript_pack 'app' %}
-```
+1. [React](react.md)
+2. [Vue](vue.md)
 
-!!! note
-    1. You can import **multiple entry files** using `stylesheet_pack` and `javascript_pack` (`{% javascript_pack 'app' 'app2'`)
-    1. The `javascript_pack` would also **import dependency files automatically to handle code splitting**
-    1. You can use `attrs` to set custom attributes, (`{% javascript_pack 'app' attrs='charset="UTF-8"' %}`)
+## Speed Up
+
+1. [ESBuild](esbuild.md)
+2. [SWC](swc.md)
+
+## Deployment
+
+1. [Deployment Notes](deployment.md)

@@ -1,16 +1,17 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 742.15625 316.26953125" width="742.15625" height="316.26953125">
   <!-- svg-source:excalidraw -->
   
-  <defs>
-    <style>
-      @font-face {
-        font-family: "Virgil";
-        src: url("https://excalidraw.com/Virgil.woff2");
-      }
-      @font-face {
-        font-family: "Cascadia";
-        src: url("https://excalidraw.com/Cascadia.woff2");
-      }
-    </style>
-  </defs>
-  <rect x="0" y="0" width="742.15625" height="316.26953125" fill="#fff6e5"></rect><g stroke-linecap="round" transform="translate(10 10) rotate(0 361.078125 148.134765625)"><path d="M-0.02 -0.5 C274.49 1.1, 549.04 0.09, 722.96 -0.76 M723.59 0.9 C724.19 75.39, 724.22 149.57, 722.12 295.81 M722.92 295.99 C453.92 295.78, 185.76 295.52, -0.71 295.65 M-1.13 295.76 C-0.96 221.65, -0.02 148.44, 1.27 -0.37" stroke="#000000" stroke-width="1.5" fill="none" stroke-dasharray="8 9"></path></g><g transform="translate(98.71875 63.16015625) rotate(0 274 21.5)"><text x="0" y="35" font-family="Cascadia, Segoe UI Emoji" font-size="36px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">Python Webpack Boilerplate</text></g><g transform="translate(104.80859375 164.00390625) rotate(0 269.5 48)"><text x="0" y="19" font-family="Cascadia, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">Jump start frontend project bundled by Webpack</text><text x="0" y="43" font-family="Cascadia, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr"></text><text x="0" y="67" font-family="Cascadia, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr"></text><text x="0" y="91" font-family="Cascadia, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">Support: (✓)Django  (✓)Flask </text></g></svg>
+  <rect x="0" y="0" width="742.15625" height="316.26953125" fill="#fff6e5"></rect>
+  <g stroke-linecap="round" transform="translate(10 10) rotate(0 361.078125 148.134765625)">
+    <path d="M-0.02 -0.5 C274.49 1.1, 549.04 0.09, 722.96 -0.76 M723.59 0.9 C724.19 75.39, 724.22 149.57, 722.12 295.81 M722.92 295.99 C453.92 295.78, 185.76 295.52, -0.71 295.65 M-1.13 295.76 C-0.96 221.65, -0.02 148.44, 1.27 -0.37" stroke="#000000" stroke-width="1.5" fill="none" stroke-dasharray="8 9"></path>
+  </g>
+  <g transform="translate(98.71875 63.16015625) rotate(0 274 21.5)">
+    <text x="0" y="35" font-family="monospace" font-size="36px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">Python Webpack Boilerplate</text>
+  </g>
+  <g transform="translate(104.80859375 164.00390625) rotate(0 269.5 48)">
+    <text x="0" y="19" font-family="monospace" font-size="20px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">Jump start frontend project bundled by Webpack</text>
+    <text x="0" y="43" font-family="monospace" font-size="20px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr"></text>
+    <text x="0" y="67" font-family="monospace" font-size="20px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr"></text>
+    <text x="0" y="91" font-family="monospace" font-size="20px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">Support: (✓)Django  (✓)Flask </text>
+  </g>
+</svg>

@@ -89,21 +89,7 @@ Notes:
 1. And then we pass the `contentPaths` to the `content`
 1. The final built css file will contain css classes used in the Django templates
 
-## App.js
-
-Remove Bootstrap bundle file from `src/application/app.js`
-
-```js
-// This is the scss entry file
-import "../styles/index.scss";
-
-// We can import other JS file as we like
-import "../components/sidebar";
-
-window.document.addEventListener("DOMContentLoaded", function () {
-  window.console.log("dom ready 1");
-});
-```
+## Import Tailwind CSS
 
 Update *src/styles/index.scss*
 
@@ -185,5 +171,5 @@ When you add Tailwind css class in Django template, it would be cool if the page
 
 To learn more about Tailwind and Django, you can check
 
-1. [wagtail-tailwind-blog](https://github.com/AccordBox/wagtail-tailwind-blog)
-2. [Django Tailwind CSS Alpine.js Tutorial](https://www.accordbox.com/blog/django-tailwind-css-alpinejs-tutorial/)
+1. [Django Tailwind CSS Alpine.js Tutorial](https://www.accordbox.com/blog/django-tailwind-css-alpinejs-tutorial/)
+2. [wagtail-tailwind-blog](https://github.com/AccordBox/wagtail-tailwind-blog)

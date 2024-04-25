@@ -51,6 +51,14 @@ def npm_project_path(tmp_path, request):
     )
     print(result.stdout, result.stderr)
 
+    # create another entrypoint file
+    app_test_content = """
+// This is a simple test script
+console.log('Hello from app_test.js');
+    """
+    app_test_path = frontend_project_path / "src" / "application" / "app_test.js"
+    app_test_path.write_text(app_test_content)
+
     yield frontend_project_path
 
 

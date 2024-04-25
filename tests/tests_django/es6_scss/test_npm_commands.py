@@ -8,7 +8,7 @@ def test_npm(npm_project_path, npm_build_commands):
     assert len(js_files) > 0
     js_files = ", ".join(js_files)
     assert re.findall(r"app[.\w]*?.js", js_files)
-    assert re.findall(r"app2[.\w]*?.js", js_files)
+    assert re.findall(r"app_test[.\w]*?.js", js_files)
 
     css_path = npm_project_path / "build" / "css"
     css_files = list(css_path.glob("*.*"))
