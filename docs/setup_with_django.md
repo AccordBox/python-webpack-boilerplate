@@ -114,11 +114,11 @@ Add code below to Django settings `example/settings.py`
 
 ```python
 STATICFILES_DIRS = [
-    BASE_DIR / "frontend/build",
+    os.path.join(BASE_DIR, "frontend/build"),
 ]
 
 WEBPACK_LOADER = {
-    'MANIFEST_FILE': BASE_DIR / "frontend/build/manifest.json",
+    'MANIFEST_FILE': os.path.join(BASE_DIR, "frontend/build/manifest.json"),
 }
 ```
 
