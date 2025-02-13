@@ -1,4 +1,4 @@
-// https://eslint.org/docs/latest/use/configure/migration-guide#eslint-env-configuration-comments
+// https://eslint.org/docs/latest/use/configure/migration-guide
 
 import babelParser from "@babel/eslint-parser";
 import js from "@eslint/js";

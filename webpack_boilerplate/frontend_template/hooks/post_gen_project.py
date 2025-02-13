@@ -9,7 +9,12 @@ HINT = "\x1b[3;33m"
 SUCCESS = "\x1b[1;32m [SUCCESS]: "
 
 DENY_LIST = [".gitignore"]
-ALLOW_LIST = ["package.json", "package-lock.json", "postcss.config.js"]
+ALLOW_LIST = [
+    "package.json",
+    "package-lock.json",
+    "postcss.config.js",
+    "eslint.config.js",
+]
 
 
 def print_success_msg(msg):
