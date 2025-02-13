@@ -1,3 +1,4 @@
+{% if cookiecutter.style_solution == 'scss' %}
 {
   "extends": "stylelint-config-standard-scss",
   "rules": {
@@ -6,3 +7,11 @@
     "scss/at-import-partial-extension": null
   }
 }
+{% elif cookiecutter.style_solution == 'tailwind' %}
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-no-unknown": null
+  }
+}
+{% endif %}

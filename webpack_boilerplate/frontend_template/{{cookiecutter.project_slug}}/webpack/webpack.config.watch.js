@@ -53,7 +53,9 @@ module.exports = merge(common, {
             },
           },
           "postcss-loader",
+{% if cookiecutter.style_solution == 'scss' %}
           "sass-loader",
+{% endif %}
         ],
       },
     ],

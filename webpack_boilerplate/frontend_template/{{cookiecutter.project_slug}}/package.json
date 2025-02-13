@@ -37,11 +37,13 @@
     "mini-css-extract-plugin": "^2.7.1",
     "postcss-loader": "^8.0.0",
     "postcss-preset-env": "^9.0.0",
+{% if cookiecutter.style_solution == 'scss' %}
     "sass": "~1.69.5",
     "sass-loader": "^13.3.2",
+    "stylelint-config-standard-scss": "^13.1.0",
+{% endif %}
     "style-loader": "^3.3.1",
     "stylelint": "^16.4.0",
-    "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-webpack-plugin": "^5.0.0",
     "webpack": "^5.75.0",
