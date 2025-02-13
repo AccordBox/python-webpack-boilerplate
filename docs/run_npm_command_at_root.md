@@ -14,7 +14,7 @@ Below files will be placed at the root directory instead of the `frontend` direc
 ```
 .babelrc
 .browserslistrc
-eslint.config.js
+.eslintrc
 .nvmrc
 .stylelintrc.json
 package-lock.json
