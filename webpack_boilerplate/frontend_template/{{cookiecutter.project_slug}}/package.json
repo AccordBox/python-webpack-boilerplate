@@ -41,6 +41,14 @@
     "sass": "1.77.6",
     "sass-loader": "^16.0.1",
     "stylelint-config-standard-scss": "^14.0.0",
+{% elif cookiecutter.style_solution == 'tailwind' %}
+    "tailwindcss": "^4.0.3",
+    "@tailwindcss/postcss": "^4.0.3",
+{% elif cookiecutter.style_solution == 'bootstrap' %}
+    "sass": "1.77.6",
+    "sass-loader": "^16.0.1",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "bootstrap": "^5.3.3",
 {% endif %}
     "style-loader": "^4.0.0",
     "stylelint": "^16.14.1",

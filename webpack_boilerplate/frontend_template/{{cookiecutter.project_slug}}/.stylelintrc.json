@@ -1,17 +1,17 @@
-{% if cookiecutter.style_solution == 'scss' %}
+{% if cookiecutter.style_solution == 'tailwind' %}
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-no-unknown": null
+  }
+}
+{% else %}
 {
   "extends": "stylelint-config-standard-scss",
   "rules": {
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
     "scss/at-import-partial-extension": null
-  }
-}
-{% elif cookiecutter.style_solution == 'tailwind' %}
-{
-  "extends": "stylelint-config-standard",
-  "rules": {
-    "at-rule-no-unknown": null
   }
 }
 {% endif %}

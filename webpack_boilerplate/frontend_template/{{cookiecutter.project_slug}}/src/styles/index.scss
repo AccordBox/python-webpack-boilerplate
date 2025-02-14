@@ -1,5 +1,20 @@
+{% if cookiecutter.style_solution == 'bootstrap' %}
+// If you comment out code below, bootstrap will use red as primary color
+// and btn-primary will become red
+
+// $primary: red;
+
+@import "~bootstrap/scss/bootstrap";
+
 .jumbotron {
   // should be relative path of the entry scss file
   background-image: url("../../vendors/images/sample.jpg");
   background-size: cover;
 }
+{% elif cookiecutter.style_solution == 'scss' %}
+.jumbotron {
+  // should be relative path of the entry scss file
+  background-image: url("../../vendors/images/sample.jpg");
+  background-size: cover;
+}
+{% endif %}
