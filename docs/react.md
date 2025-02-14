@@ -54,7 +54,7 @@ Create `frontend/src/application/app_react.js`
 
 ```js
 import React, { useState, useEffect } from 'react';
-import { createRoot } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 
 const Clock = () => {

@@ -29,7 +29,21 @@ def get_frontend_config_files():
         yield os.path.dirname(full_path), os.path.basename(full_path)
 
 
+def process_style_entry_file():
+    frontend_path = os.getcwd()
+
+    if "{{ cookiecutter.style_solution }}".lower() == "tailwind":
+        full_path = os.path.join(frontend_path, "src/styles/index.scss")
+        os.remove(full_path)
+    elif "{{ cookiecutter.style_solution }}".lower() in ["scss", "bootstrap"]:
+        full_path = os.path.join(frontend_path, "src/styles/index.css")
+        os.remove(full_path)
+
+
 def copy_frontend_config_files():
+    """
+    Copy frontend config files to the root directory
+    """
     for dirname, filename in get_frontend_config_files():
         old_full_path = os.path.join(dirname, filename)
         root_dir = os.path.dirname(dirname)
@@ -57,6 +71,8 @@ def main():
     if "{{ cookiecutter.run_npm_command_at_root }}".lower() == "y":
         update_webpack_path()
         copy_frontend_config_files()
+
+    process_style_entry_file()
 
     print_success_msg(
         f"Frontend app '{{ cookiecutter.project_slug }}' "

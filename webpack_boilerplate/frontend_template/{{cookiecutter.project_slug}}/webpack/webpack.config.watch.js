@@ -53,7 +53,10 @@ module.exports = merge(common, {
             },
           },
           "postcss-loader",
+{% if cookiecutter.style_solution == 'tailwind' %}
+{% else %}
           "sass-loader",
+{% endif %}
         ],
       },
     ],

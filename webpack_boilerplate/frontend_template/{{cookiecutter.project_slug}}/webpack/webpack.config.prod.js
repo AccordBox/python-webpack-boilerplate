@@ -33,7 +33,10 @@ module.exports = merge(common, {
           MiniCssExtractPlugin.loader,
           "css-loader",
           "postcss-loader",
+{% if cookiecutter.style_solution == 'tailwind' %}
+{% else %}
           "sass-loader",
+{% endif %}
         ],
       },
     ],

@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+.jumbotron {
+  /*should be relative path of the entry css file*/
+  background-image: url("../../vendors/images/sample.jpg");
+  background-size: cover;
+}
+
+@layer components{
+  .btn-blue {
+    @apply inline-flex items-center;
+    @apply px-4 py-2;
+    @apply font-semibold rounded-lg shadow-md;
+    @apply text-white bg-blue-500;
+    @apply hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400/50;
+  }
+}

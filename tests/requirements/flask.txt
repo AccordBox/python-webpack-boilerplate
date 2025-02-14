@@ -1,5 +1,0 @@
--r base.txt
-
-pytest-flask==1.2.0
-Flask
-markupsafe==2.0.1  # https://github.com/microsoft/PTVS/issues/6889
