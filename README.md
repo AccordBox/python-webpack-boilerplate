@@ -29,7 +29,6 @@ If you like this project, please consider supporting my work. [Open Collective](
 
 ## Special Thanks
 
-* [Definitive Guide to Django and Webpack](https://www.accordbox.com/blog/definitive-guide-django-and-webpack/)
-* [django-webpack-loader](https://github.com/owais/django-webpack-loader)
-* [rails/webpacker](https://github.com/rails/webpacker)
-* [wbkd/webpack-starter](https://github.com/wbkd/webpack-starter)
+* [cssbundling-rails](https://github.com/rails/cssbundling-rails)
+* [jsbundling-rails](https://github.com/rails/jsbundling-rails)
+* [shakapacker](https://github.com/shakacode/shakapacker)
