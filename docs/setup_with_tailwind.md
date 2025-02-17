@@ -29,7 +29,7 @@ $ npm run watch
 
 ## Explicitly Specify Source Files
 
-Even Tailwind 4 can AUTO scan all project files in the project directory, we still recommend to explicitly specify the source files to improve performance.
+Even Tailwind 4 can AUTO scan all project files in the project directory, we still recommend to explicitly specify the source files to improve performance and avoid webpack keeps recompiling.
 
 Below is an example
 
@@ -59,6 +59,9 @@ Below is an example
     }
 }
 ```
+
+!!! note
+    Please remember to update the file path in your project.
 
 ## Live Reload
 
