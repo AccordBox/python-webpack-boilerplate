@@ -6,6 +6,13 @@
 
 Bring modern frontend tooling to Django, Flask, within minutes.
 
+Key Features:
+
+1. Out-of-the-box support for `Tailwind CSS`, `Bootstrap`, and `SCSS`.
+1. Seamless integration of modern JavaScript tooling.
+1. Effortless code linting for JavaScript, CSS, and SCSS.
+1. Comprehensive documentation with detailed configuration instructions.
+
 ## Documentation
 
 [Documentation](https://python-webpack-boilerplate.rtfd.io/)

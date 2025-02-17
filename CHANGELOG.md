@@ -1,5 +1,12 @@
 # Change Log
 
+## v1.0.4
+
+1. Upgrade nvmrc to use Node v22.
+2. Upgrade the frontend dependency
+3. Add `Tailwind`, `Bootstrap` and the `SCSS` as the pre-built style solutions.
+4. Add doc for `Tailwind v4`
+
 ## v1.0.3
 
 1. Remove `Bootstrap` from the default setup.

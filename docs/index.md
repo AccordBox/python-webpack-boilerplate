@@ -9,8 +9,9 @@
 
 ## Style Solutions
 
-1. [Tailwind CSS](setup_with_tailwind.md)
-2. [Bootstrap](setup_with_bootstrap.md)
+1. [Tailwind CSS v4](setup_with_tailwind.md)
+2. [Tailwind CSS v3](setup_with_tailwind3.md)
+3. [Bootstrap](setup_with_bootstrap.md)
 
 ## Features
 

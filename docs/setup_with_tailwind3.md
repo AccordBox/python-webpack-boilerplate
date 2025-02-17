@@ -1,4 +1,4 @@
-# Tailwind CSS V3
+# Tailwind CSS v3
 
 This guide will help you install and config `Tailwind v3`
 

@@ -1,4 +1,4 @@
-# Tailwind CSS V4
+# Tailwind CSS v4
 
 From `python-webpack-boilerplate>=1.0.4`, we can choose `tailwind` as the style solution when creating the frontend project.
 
@@ -66,4 +66,4 @@ Below is an example
 
 ## Tailwind V3
 
-If you still want to install Tailwind V3, please check [Tailwind CSS V3](setup_with_tailwind3.md)
+If you still want to install Tailwind V3, please check [Tailwind CSS v3](setup_with_tailwind3.md)

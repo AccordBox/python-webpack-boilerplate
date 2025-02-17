@@ -20,8 +20,8 @@ nav:
   - Frontend workflow: frontend.md
   - Code Linting: linting.md
   - Live Reload: live_reload.md
-  - Tailwind CSS V4: setup_with_tailwind.md
-  - Tailwind CSS V3: setup_with_tailwind3.md
+  - Tailwind CSS v4: setup_with_tailwind.md
+  - Tailwind CSS v3: setup_with_tailwind3.md
   - Bootstrap: setup_with_bootstrap.md
   - React: react.md
   - Vue: vue.md
