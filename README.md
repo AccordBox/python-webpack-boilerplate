@@ -1,3 +1,13 @@
+# ⚠️ Project No Longer Maintained
+
+**This project is no longer actively maintained.** Please use the successor project instead:
+
+👉 **[django-vite-boilerplate](https://github.com/AccordBox/django-vite-boilerplate)**
+
+The new project uses Vite instead of Webpack for faster build times and better development experience. It's also built by me, the same author of this project.
+
+---
+
 # Jump start frontend project bundled by Webpack
 
 [![Build Status](https://github.com/AccordBox/python-webpack-boilerplate/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/AccordBox/python-webpack-boilerplate/actions/workflows/ci.yml)
